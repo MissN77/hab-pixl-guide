@@ -999,6 +999,68 @@
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => showTab(btn.dataset.tab));
   });
+  /* ═══ SUPABASE SILENT TRACKING + FEEDBACK ═══ */
+  const SB_URL = 'https://awnmaakxaqevodjjuzsm.supabase.co';
+  const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF3bm1hYWt4YXFldm9kamp1enNtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0MzgwNzIsImV4cCI6MjA5MDAxNDA3Mn0.uwpcN1iqJos6llw4XAZLSYLqZc0AnVJK8tVTYbxmiZs';
+
+  function sbPost(table, data) {
+    fetch(SB_URL + '/rest/v1/' + table, {
+      method: 'POST',
+      headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
+      body: JSON.stringify(data)
+    }).catch(() => {});
+  }
+
+  // Silent: log page open
+  sbPost('activity_log', { student_name: 'TEACHER', action: 'teacher_app_open', topic_id: null, topic_name: null, quiz_type: null, score: null, total: null });
+
+  // Silent: log tab switches
+  const origShowTab = showTab;
+  showTab = function(tabId) {
+    origShowTab(tabId);
+    sbPost('activity_log', { student_name: 'TEACHER', action: 'teacher_tab_view', topic_id: tabId, topic_name: tabId, quiz_type: null, score: null, total: null });
+  };
+
+  // Feedback modal
+  function openFeedback() { document.getElementById('fbModal').classList.add('open'); }
+  function closeFeedback() { document.getElementById('fbModal').classList.remove('open'); }
+  function submitFeedback() {
+    const text = document.getElementById('fbText').value.trim();
+    if (!text) return;
+    const name = document.getElementById('fbName').value.trim() || 'Anonymous';
+    sbPost('activity_log', { student_name: 'TEACHER: ' + name, action: 'teacher_feedback', topic_id: null, topic_name: text, quiz_type: null, score: null, total: null });
+    document.getElementById('fbText').value = '';
+    document.getElementById('fbConfirm').style.display = 'block';
+    setTimeout(() => { closeFeedback(); document.getElementById('fbConfirm').style.display = 'none'; }, 2000);
+  }
+</script>
+
+<!-- FEEDBACK BUTTON -->
+<div style="position:fixed;bottom:20px;right:20px;z-index:900">
+  <button onclick="openFeedback()" style="background:var(--teal);color:#fff;border:none;padding:12px 20px;border-radius:30px;font-family:'Segoe UI',Calibri,Arial,sans-serif;font-weight:700;font-size:0.85rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15);transition:all .2s">Give Feedback</button>
+</div>
+
+<!-- FEEDBACK MODAL -->
+<div id="fbModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center">
+  <div style="background:var(--cream);border-radius:14px;max-width:420px;width:90%;padding:28px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.2)">
+    <h3 style="color:var(--navy);font-size:1.1rem;margin-bottom:6px">Your Feedback</h3>
+    <p style="color:#666;font-size:.88rem;margin-bottom:16px">How are you finding this resource? Any suggestions?</p>
+    <input id="fbName" type="text" placeholder="Your name (optional)" maxlength="40" style="width:100%;padding:10px 14px;border:2px solid #ddd;border-radius:8px;font-size:.95rem;margin-bottom:10px">
+    <textarea id="fbText" rows="4" placeholder="Type your feedback here..." style="width:100%;padding:10px 14px;border:2px solid #ddd;border-radius:8px;font-family:inherit;font-size:.95rem;resize:vertical;margin-bottom:12px"></textarea>
+    <div id="fbConfirm" style="display:none;color:var(--teal);font-weight:700;margin-bottom:10px">Thanks! Feedback sent.</div>
+    <div style="display:flex;gap:10px;justify-content:center">
+      <button onclick="closeFeedback()" style="padding:10px 20px;border:2px solid #ddd;border-radius:8px;background:#fff;color:#666;font-weight:700;cursor:pointer">Cancel</button>
+      <button onclick="submitFeedback()" style="padding:10px 20px;border:none;border-radius:8px;background:var(--teal);color:#fff;font-weight:700;cursor:pointer">Send</button>
+    </div>
+  </div>
+</div>
+<script>
+  document.getElementById('fbModal').addEventListener('click', function(e) { if (e.target === this) closeFeedback(); });
+  // Fix modal display
+  document.getElementById('fbModal').style.cssText += 'display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center;';
+  function openFeedbackFix() { const m = document.getElementById('fbModal'); m.style.display = 'flex'; }
+  // Override
+  document.querySelector('[onclick="openFeedback()"]').setAttribute('onclick', 'document.getElementById("fbModal").style.display="flex"');
 </script>
 
 </body>
