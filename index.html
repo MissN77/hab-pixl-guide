@@ -3,1064 +3,520 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PiXL Science Resource Guide - HAB Crayford</title>
+<title>PiXL Lesson Planner - HAB Crayford Science</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   :root {
     --navy: #1B2A4A;
     --teal: #2A9D8F;
     --coral: #E76F51;
     --cream: #FAF3E0;
     --gold: #E9C46A;
+    --bio: #4CAF50;
+    --chem: #2196F3;
+    --phys: #FF9800;
     --light-teal: #e8f5f3;
     --light-coral: #fef0ec;
     --light-gold: #fdf6e3;
-    --light-navy: #eef1f5;
-    --bio-green: #4CAF50;
-    --chem-blue: #2196F3;
-    --phys-orange: #FF9800;
-    --grey-text: #555;
     --white: #fff;
+    --grey: #666;
+    --border: #e0e0e0;
+    --shadow: 0 2px 8px rgba(0,0,0,0.08);
   }
-
-  body {
-    font-family: 'Segoe UI', Calibri, Arial, sans-serif;
-    background: var(--cream);
-    color: #333;
-    line-height: 1.6;
-  }
+  body { font-family: Calibri, 'Segoe UI', Arial, sans-serif; background: var(--cream); color: #333; line-height: 1.5; }
 
   /* HEADER */
-  header {
-    background: var(--navy);
-    color: var(--white);
-    padding: 1.5rem 2rem;
-    text-align: center;
-  }
-  header h1 {
-    font-family: Arial, sans-serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 0.3rem;
-  }
-  header p {
-    font-size: 0.95rem;
-    opacity: 0.85;
-  }
-  .school-badge {
-    display: inline-block;
-    background: var(--teal);
-    color: var(--white);
-    padding: 0.2rem 0.8rem;
-    border-radius: 12px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
+  header { background: var(--navy); color: var(--white); padding: 1.2rem 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+  header h1 { font-family: Arial, sans-serif; font-size: 1.5rem; }
+  .badge { background: var(--teal); color: var(--white); padding: 0.2rem 0.7rem; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
+  .pixl-login-btn { background: var(--coral); color: var(--white); border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+  .pixl-login-btn:hover { opacity: 0.9; }
 
-  /* NAV TABS */
-  .tab-nav {
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    background: var(--navy);
-    padding: 0 1rem 0.8rem;
-    flex-wrap: wrap;
-  }
-  .tab-btn {
-    background: transparent;
-    border: none;
-    color: rgba(255,255,255,0.6);
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-    cursor: pointer;
-    border-bottom: 3px solid transparent;
-    transition: all 0.2s;
-    font-weight: 500;
-  }
-  .tab-btn:hover { color: var(--white); }
-  .tab-btn.active {
-    color: var(--white);
-    border-bottom-color: var(--gold);
-  }
+  /* TABS */
+  .tab-nav { display: flex; background: var(--navy); padding: 0 1rem 0.6rem; gap: 0.3rem; flex-wrap: wrap; }
+  .tab-btn { background: transparent; border: none; color: rgba(255,255,255,0.55); padding: 0.5rem 1rem; font-size: 0.9rem; cursor: pointer; border-bottom: 3px solid transparent; font-weight: 500; transition: all 0.2s; }
+  .tab-btn.active, .tab-btn:hover { color: var(--white); border-bottom-color: var(--teal); }
 
-  /* MAIN */
-  main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1.5rem;
-  }
+  main { max-width: 960px; margin: 0 auto; padding: 1.5rem; }
 
   .tab-content { display: none; }
   .tab-content.active { display: block; }
 
-  /* SECTION INTRO */
-  .section-intro {
-    background: var(--white);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-left: 4px solid var(--teal);
-  }
-  .section-intro h2 {
-    font-family: Arial, sans-serif;
-    color: var(--navy);
-    margin-bottom: 0.5rem;
-    font-size: 1.3rem;
-  }
-  .section-intro p {
-    color: var(--grey-text);
-    font-size: 0.95rem;
-  }
+  /* LESSON BUILDER */
+  .selectors { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .selectors label { font-weight: 600; font-size: 0.85rem; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+  .selectors select { padding: 0.6rem 1rem; border: 2px solid var(--border); border-radius: 8px; font-size: 1rem; background: var(--white); min-width: 200px; cursor: pointer; }
+  .selectors select:focus { border-color: var(--teal); outline: none; }
 
-  /* USE CASE CARDS */
-  .use-case-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  .use-case-card {
-    background: var(--white);
-    border-radius: 12px;
-    padding: 1.5rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    border: 2px solid transparent;
-    position: relative;
-  }
-  .use-case-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    border-color: var(--teal);
-  }
-  .use-case-card h3 {
-    font-family: Arial, sans-serif;
-    color: var(--navy);
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-  }
-  .use-case-card .scenario {
-    color: var(--teal);
-    font-weight: 600;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.4rem;
-  }
-  .use-case-card p {
-    color: var(--grey-text);
-    font-size: 0.9rem;
-  }
-  .use-case-card .resources-list {
-    margin-top: 0.8rem;
-    padding-top: 0.8rem;
-    border-top: 1px solid #eee;
-  }
-  .use-case-card .resource-link {
-    display: inline-block;
-    background: var(--light-teal);
-    color: var(--teal);
-    padding: 0.25rem 0.6rem;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin: 0.2rem 0.2rem 0.2rem 0;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-  .use-case-card .resource-link:hover {
-    background: var(--teal);
-    color: var(--white);
-  }
-  .audience-tag {
-    display: inline-block;
-    padding: 0.15rem 0.5rem;
-    border-radius: 8px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-left: 0.3rem;
-    vertical-align: middle;
-  }
-  .tag-students {
-    background: #e8f5e9;
-    color: var(--bio-green);
-  }
-  .tag-teacher {
-    background: var(--light-coral);
-    color: var(--coral);
-  }
-  .tag-both {
-    background: var(--light-gold);
-    color: #b8860b;
-  }
+  .lesson-flow { display: flex; flex-direction: column; gap: 0; }
+  .phase { background: var(--white); border: 1px solid var(--border); padding: 1rem 1.2rem; display: flex; align-items: center; gap: 1rem; transition: all 0.2s; position: relative; }
+  .phase:first-child { border-radius: 10px 10px 0 0; }
+  .phase:last-child { border-radius: 0 0 10px 10px; }
+  .phase + .phase { border-top: none; }
+  .phase:hover { background: var(--light-teal); }
 
-  /* RESOURCE TYPE CARDS */
-  .resource-section {
-    margin-bottom: 2rem;
-  }
-  .resource-section h2 {
-    font-family: Arial, sans-serif;
-    color: var(--navy);
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--gold);
-  }
+  .phase-num { width: 36px; height: 36px; border-radius: 50%; background: var(--navy); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+  .phase-info { flex: 1; }
+  .phase-name { font-weight: 700; font-family: Arial, sans-serif; color: var(--navy); font-size: 1rem; }
+  .phase-desc { font-size: 0.85rem; color: var(--grey); margin-top: 0.15rem; }
+  .phase-resource { font-size: 0.8rem; color: var(--teal); font-weight: 600; margin-top: 0.2rem; }
 
-  .resource-card {
-    background: var(--white);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-    transition: all 0.2s;
-  }
-  .resource-card:hover {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  }
-  .resource-card h3 {
-    font-family: Arial, sans-serif;
-    color: var(--navy);
-    font-size: 1.05rem;
-    margin-bottom: 0.3rem;
-  }
-  .resource-card .what {
-    color: var(--grey-text);
-    font-size: 0.9rem;
-    margin-bottom: 0.6rem;
-  }
-  .resource-card .detail-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.8rem;
-    margin-bottom: 0.8rem;
-  }
+  .phase-link { flex-shrink: 0; }
+  .open-btn { background: var(--teal); color: var(--white); border: none; padding: 0.45rem 1rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: 600; text-decoration: none; display: inline-block; }
+  .open-btn:hover { background: #238b7e; }
+  .open-btn.disabled { background: #ccc; cursor: not-allowed; pointer-events: none; }
+
+  .no-topic { text-align: center; padding: 3rem; color: var(--grey); font-size: 1.1rem; }
+  .no-topic .arrow { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
+
+  /* CONNECTORS */
+  .connector { text-align: center; padding: 0.2rem; color: var(--border); font-size: 1.2rem; line-height: 1; }
+
+  /* INFO BOX */
+  .info-box { background: var(--light-gold); border-left: 4px solid var(--gold); padding: 0.8rem 1rem; border-radius: 0 8px 8px 0; margin-top: 1rem; font-size: 0.85rem; }
+  .info-box strong { color: var(--navy); }
+
+  /* LOGIN BANNER */
+  .login-banner { background: var(--light-coral); border: 2px solid var(--coral); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .login-banner p { flex: 1; font-size: 0.9rem; min-width: 200px; }
+  .login-banner strong { color: var(--coral); }
+
+  /* GUIDE TAB */
+  .guide-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+  .guide-card { background: var(--white); border-radius: 10px; padding: 1.2rem; box-shadow: var(--shadow); }
+  .guide-card h3 { font-family: Arial, sans-serif; color: var(--navy); margin-bottom: 0.4rem; font-size: 1rem; }
+  .guide-card p { font-size: 0.85rem; color: var(--grey); }
+  .guide-card .when { background: var(--light-teal); padding: 0.4rem 0.7rem; border-radius: 6px; font-size: 0.8rem; margin-top: 0.5rem; display: inline-block; }
+
+  /* EXTRA RESOURCES */
+  .extras-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; margin-top: 1rem; }
+  .extra-card { background: var(--white); border-radius: 10px; padding: 1rem; box-shadow: var(--shadow); }
+  .extra-card h3 { font-size: 0.95rem; color: var(--navy); margin-bottom: 0.3rem; }
+  .extra-card p { font-size: 0.8rem; color: var(--grey); margin-bottom: 0.5rem; }
+  .extra-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .extra-links a { font-size: 0.8rem; color: var(--teal); font-weight: 600; text-decoration: none; padding: 0.2rem 0.6rem; border: 1px solid var(--teal); border-radius: 4px; }
+  .extra-links a:hover { background: var(--teal); color: var(--white); }
+
+  footer { text-align: center; padding: 1.5rem; font-size: 0.75rem; color: var(--grey); }
+
   @media (max-width: 600px) {
-    .resource-card .detail-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  .detail-item {
-    font-size: 0.85rem;
-  }
-  .detail-item .label {
-    font-weight: 700;
-    color: var(--navy);
-    display: block;
-    margin-bottom: 0.15rem;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .detail-item .value {
-    color: var(--grey-text);
-  }
-
-  .subject-links {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-top: 0.8rem;
-  }
-  .subject-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.85rem;
-    transition: all 0.2s;
-  }
-  .subject-link:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-  }
-  .link-bio {
-    background: #e8f5e9;
-    color: #2e7d32;
-  }
-  .link-bio:hover { background: #c8e6c9; }
-  .link-chem {
-    background: #e3f2fd;
-    color: #1565c0;
-  }
-  .link-chem:hover { background: #bbdefb; }
-  .link-phys {
-    background: #fff3e0;
-    color: #e65100;
-  }
-  .link-phys:hover { background: #ffe0b2; }
-  .link-all {
-    background: var(--light-navy);
-    color: var(--navy);
-  }
-  .link-all:hover { background: #dde3ed; }
-
-  .tip-box {
-    background: var(--light-gold);
-    border-radius: 8px;
-    padding: 0.8rem 1rem;
-    margin-top: 0.8rem;
-    font-size: 0.85rem;
-    color: #8B6914;
-    border-left: 3px solid var(--gold);
-  }
-  .tip-box strong {
-    color: #6B4F0A;
-  }
-
-  /* FILE FORMAT BADGES */
-  .format-badge {
-    display: inline-block;
-    padding: 0.15rem 0.4rem;
-    border-radius: 4px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .format-pptx { background: #fce4ec; color: #c62828; }
-  .format-docx { background: #e3f2fd; color: #1565c0; }
-  .format-pdf { background: #fafafa; color: #616161; }
-
-  /* QUICK START */
-  .quick-start {
-    background: linear-gradient(135deg, var(--teal), #237a6f);
-    color: var(--white);
-    border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  .quick-start h2 {
-    font-family: Arial, sans-serif;
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-  }
-  .quick-start p {
-    opacity: 0.9;
-    margin-bottom: 1.2rem;
-    font-size: 0.95rem;
-  }
-  .quick-start-btn {
-    display: inline-block;
-    background: var(--white);
-    color: var(--teal);
-    padding: 0.6rem 1.5rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.9rem;
-    transition: all 0.2s;
-    margin: 0.3rem;
-  }
-  .quick-start-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  }
-
-  /* GLOSSARY */
-  .glossary-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  .glossary-item {
-    background: var(--white);
-    border-radius: 10px;
-    padding: 1rem;
-  }
-  .glossary-item h4 {
-    color: var(--navy);
-    font-size: 0.95rem;
-    margin-bottom: 0.3rem;
-  }
-  .glossary-item p {
-    color: var(--grey-text);
-    font-size: 0.82rem;
-  }
-  .glossary-item .level-indicator {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-right: 0.3rem;
-  }
-
-  /* FOOTER */
-  footer {
-    text-align: center;
-    padding: 2rem;
-    color: var(--grey-text);
-    font-size: 0.8rem;
-  }
-  footer a { color: var(--teal); }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    header h1 { font-size: 1.4rem; }
-    main { padding: 1rem; }
-    .use-case-grid { grid-template-columns: 1fr; }
-    .tab-btn { padding: 0.5rem 0.8rem; font-size: 0.8rem; }
+    header { padding: 1rem; }
+    header h1 { font-size: 1.2rem; }
+    .selectors select { min-width: 100%; }
+    .phase { flex-wrap: wrap; }
+    .phase-link { width: 100%; }
+    .open-btn { width: 100%; text-align: center; }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="school-badge">HAB Crayford Academy</div>
-  <h1>PiXL Science Resource Guide</h1>
-  <p>Edexcel GCSE Combined & Separate Sciences - Everything you need, explained simply</p>
+  <div>
+    <span class="badge">HAB Crayford</span>
+    <h1>PiXL Lesson Planner</h1>
+  </div>
+  <a href="https://auth.pixl.org.uk/members/#!/subjects/Science" target="_blank" class="pixl-login-btn" id="loginBtn">Log in to PiXL first</a>
 </header>
 
 <nav class="tab-nav">
-  <button class="tab-btn active" data-tab="start">Quick Start</button>
-  <button class="tab-btn" data-tab="scenarios">What Do I Need?</button>
-  <button class="tab-btn" data-tab="resources">All Resources</button>
-  <button class="tab-btn" data-tab="glossary">PiXL Jargon Buster</button>
+  <button class="tab-btn active" data-tab="planner">Lesson Planner</button>
+  <button class="tab-btn" data-tab="extras">More Resources</button>
+  <button class="tab-btn" data-tab="guide">Quick Guide</button>
 </nav>
 
 <main>
 
-  <!-- ==================== QUICK START ==================== -->
-  <div class="tab-content active" id="tab-start">
+<!-- ==================== LESSON PLANNER ==================== -->
+<div class="tab-content active" id="tab-planner">
 
-    <div class="quick-start">
-      <h2>Your PiXL login already works</h2>
-      <p>Every link in this guide takes you directly to the right folder on PiXL. Just click and download. No more digging through menus.</p>
-      <a href="https://auth.pixl.org.uk/members/#!/subjects/Science" target="_blank" class="quick-start-btn">Open PiXL Science Home</a>
-    </div>
-
-    <div class="section-intro" style="border-left-color: var(--coral);">
-      <h2 style="color: var(--coral);">Start Here: Lesson Frameworks</h2>
-      <p>These two PowerPoint frameworks tell you exactly how to structure a revision lesson using PiXL resources. Every slide has clear instructions, which PiXL resource to use, and where to find it. Download, insert your topic name, and you are ready to teach.</p>
-      <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-        <div style="flex: 1; min-width: 280px; background: var(--light-teal); border-radius: 8px; padding: 1rem;">
-          <h3 style="font-family: Arial; color: var(--navy); font-size: 1rem; margin-bottom: 0.3rem;">Topic Knowledge Revision Framework</h3>
-          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Do Now (KnowIT Questions) > I Do (KnowIT PPT) > We Do (GraspIT together) > You Do (GraspIT Write On) > Exit Ticket</p>
-          <span class="format-badge format-pptx">PPTX</span>
-        </div>
-        <div style="flex: 1; min-width: 280px; background: var(--light-coral); border-radius: 8px; padding: 1rem;">
-          <h3 style="font-family: Arial; color: var(--navy); font-size: 1rem; margin-bottom: 0.3rem;">Exam Skills Revision Framework</h3>
-          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">3 cross-cutting skills: Core Practicals (CIDER), Command Words (PEEL), Calculations (EVERY). Same Do Now > I Do > We Do > You Do > Exit Ticket structure.</p>
-          <span class="format-badge format-pptx">PPTX</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-intro">
-      <h2>Why this guide exists</h2>
-      <p>PiXL has brilliant science resources that most teachers never use because (a) they do not know they are there and (b) the platform is hard to navigate. This guide curates everything relevant to <strong>Edexcel GCSE Science</strong> and tells you exactly what each resource is, who it is for, and when to use it.</p>
-    </div>
-
-    <h2 style="font-family: Arial; color: var(--navy); margin-bottom: 1rem; font-size: 1.2rem;">The 5 resource families you need to know</h2>
-
-    <div class="use-case-grid">
-
-      <div class="use-case-card" onclick="showTab('resources')">
-        <div class="scenario">Retrieval & Recall</div>
-        <h3>KnowIT</h3>
-        <p>PowerPoint presentations that teach the key knowledge for each topic, plus separate question sheets for students to test their recall.</p>
-        <div class="resources-list">
-          <span class="format-badge format-pptx">PPT</span> Teacher presentations
-          <span class="format-badge format-docx" style="margin-left:0.5rem">DOCX</span> Student question sheets
-        </div>
-      </div>
-
-      <div class="use-case-card" onclick="showTab('resources')">
-        <div class="scenario">Application Practice</div>
-        <h3>GraspIT</h3>
-        <p>Application-style questions for each Edexcel topic. Come in 3 versions: Write On (students write on the sheet), Reusable (answer on separate paper), and Answers (for marking).</p>
-        <div class="resources-list">
-          <span class="format-badge format-docx">DOCX</span> Write On / Reusable / Answers
-        </div>
-      </div>
-
-      <div class="use-case-card" onclick="showTab('resources')">
-        <div class="scenario">Stretch & Challenge</div>
-        <h3>ThinkIT</h3>
-        <p>Higher-order challenge questions designed for your top students. Great for pushing grades 7-9.</p>
-        <div class="resources-list">
-          <span class="format-badge format-pptx">PPT</span> Teacher presentations
-        </div>
-      </div>
-
-      <div class="use-case-card" onclick="showTab('resources')">
-        <div class="scenario">Foundational Knowledge</div>
-        <h3>Spine Mats</h3>
-        <p>One-page knowledge mats covering the essential "spine" of each science topic. Come in filled (revision reference) and blank (students complete from memory) versions. Plus Extension Booklets for deeper work.</p>
-        <div class="resources-list">
-          <span class="audience-tag tag-students">Students</span>
-          <span class="audience-tag tag-teacher">Teacher ref</span>
-        </div>
-      </div>
-
-      <div class="use-case-card" onclick="showTab('resources')">
-        <div class="scenario">Knowledge Reference</div>
-        <h3>Knowledge Mats</h3>
-        <p>Detailed Edexcel-specific knowledge PowerPoints for each topic, split into Part 1 and Part 2. Dense but comprehensive - best printed as reference sheets or used by teachers to plan.</p>
-        <div class="resources-list">
-          <span class="format-badge format-pptx">PPT</span> Edexcel-specific, by topic
-        </div>
-      </div>
-
-    </div>
-
+  <div class="login-banner" id="loginBanner">
+    <p><strong>Step 1:</strong> Click "Log in to PiXL first" in the top right. Once logged in, all resource links below will work. You must be logged in <strong>in this browser</strong>.</p>
+    <button class="pixl-login-btn" onclick="openPixl()">Open PiXL Login</button>
   </div>
 
-  <!-- ==================== SCENARIOS ==================== -->
-  <div class="tab-content" id="tab-scenarios">
-
-    <div class="section-intro">
-      <h2>What do you need right now?</h2>
-      <p>Pick your scenario below and we will point you to exactly the right PiXL resource, with a direct link.</p>
+  <div class="selectors">
+    <div>
+      <label for="subject">Subject</label>
+      <select id="subject" onchange="updateTopics()">
+        <option value="">Choose subject...</option>
+        <option value="bio">Biology</option>
+        <option value="chem">Chemistry</option>
+        <option value="phys">Physics</option>
+      </select>
     </div>
-
-    <div class="use-case-grid">
-
-      <div class="use-case-card">
-        <div class="scenario">Setting revision homework</div>
-        <h3>GraspIT Write On sheets</h3>
-        <p>Print or share the "Write On" version. Students answer directly on the sheet. You mark using the Answers version. Topic-specific, Edexcel-aligned, no prep needed.</p>
-        <div class="resources-list">
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897666" target="_blank" class="resource-link">Biology</a>
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897676" target="_blank" class="resource-link">Chemistry</a>
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897686" target="_blank" class="resource-link">Physics</a>
-        </div>
-        <div class="tip-box"><strong>Top tip:</strong> Print double-sided with KnowIT Questions on the back for a complete revision pack on one piece of paper.</div>
-      </div>
-
-      <div class="use-case-card">
-        <div class="scenario">Running an intervention session</div>
-        <h3>Therapy & Testing PPTs</h3>
-        <p>Ready-made presentations targeting the topics students struggle with most (identified from examiner reports). Topics include osmosis, cell division, command words, maths in science. Cross-board but the science content is universal.</p>
-        <div class="resources-list">
-          <a href="https://auth.pixl.org.uk/members/#!/resources/46501185" target="_blank" class="resource-link">Biology T&T</a>
-          <a href="https://auth.pixl.org.uk/members/#!/resources/46501187" target="_blank" class="resource-link">Chemistry T&T</a>
-          <a href="https://auth.pixl.org.uk/members/#!/resources/46501189" target="_blank" class="resource-link">Physics T&T</a>
-        </div>
-        <div class="tip-box"><strong>Top tip:</strong> There are Edexcel-specific command word PDFs in the Biology folder - great for exam technique sessions.</div>
-      </div>
-
-      <div class="use-case-card">
-        <div class="scenario">Quick lesson starter (5 mins)</div>
-        <h3>KnowIT Questions or Spine Mats</h3>
-        <p>Project a KnowIT question sheet on the board and give students 5 minutes to answer from memory. Or display a blank Spine Mat and have students fill in what they remember before revealing the filled version.</p>
-        <div class="resources-list">
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897666" target="_blank" class="resource-link">Bio KnowIT</a>
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897676" target="_blank" class="resource-link">Chem KnowIT</a>
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897686" target="_blank" class="resource-link">Phys KnowIT</a>
-          <a href="https://auth.pixl.org.uk/members/feature/1/49895311" target="_blank" class="resource-link">Spine Mats</a>
-        </div>
-      </div>
-
-      <div class="use-case-card">
-        <div class="scenario">Student revising independently</div>
-        <h3>GraspIT Write On + Filled Spine Mats</h3>
-        <p>Direct students to the GraspIT Write On sheets for practice and the filled Spine Mats as reference. They can self-assess using the Answers version. No teacher input needed.</p>
-        <div class="resources-list">
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897666" target="_blank" class="resource-link">Bio GraspIT</a>
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897676" target="_blank" class="resource-link">Chem GraspIT</a>
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897686" target="_blank" class="resource-link">Phys GraspIT</a>
-          <a href="https://auth.pixl.org.uk/members/feature/1/49895311" target="_blank" class="resource-link">Spine Mats</a>
-        </div>
-        <div class="tip-box"><strong>Top tip:</strong> Print the filled Spine Mat alongside a blank one. Students read the filled version for 5 minutes, then complete the blank from memory. This is retrieval practice at its best.</div>
-      </div>
-
-      <div class="use-case-card">
-        <div class="scenario">Stretching top students</div>
-        <h3>ThinkIT + Spine Extension Booklets</h3>
-        <p>ThinkIT presentations have higher-order questions for each topic. The Spine Extension Booklets go deeper with activities that push students to apply knowledge in new contexts.</p>
-        <div class="resources-list">
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897666" target="_blank" class="resource-link">Bio ThinkIT</a>
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897676" target="_blank" class="resource-link">Chem ThinkIT</a>
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897686" target="_blank" class="resource-link">Phys ThinkIT</a>
-          <a href="https://auth.pixl.org.uk/members/feature/1/49895311" target="_blank" class="resource-link">Extension Booklets</a>
-        </div>
-      </div>
-
-      <div class="use-case-card">
-        <div class="scenario">Supporting lower attainers</div>
-        <h3>GetIT resources</h3>
-        <p>Specifically designed for students working towards grades 1-2. Simplified language, scaffolded questions, cross-board so the content is universal. Found in the ITs family folder.</p>
-        <div class="resources-list">
-          <a href="https://auth.pixl.org.uk/members/#!/resources/44160992" target="_blank" class="resource-link">GetIT resources</a>
-        </div>
-      </div>
-
-      <div class="use-case-card">
-        <div class="scenario">Exam technique practice</div>
-        <h3>Command Words DTT packs</h3>
-        <p>Diagnose-Therapy-Test format. Students identify which command words they are weak on, work through therapy examples, then test themselves. Available for Biology, Chemistry, and Physics (2 packs each).</p>
-        <div class="resources-list">
-          <a href="https://auth.pixl.org.uk/members/#!/resources/48944388" target="_blank" class="resource-link">Command Words DTT</a>
-        </div>
-        <div class="tip-box"><strong>Top tip:</strong> Download the .docx versions so you can edit them. The PDFs are print-ready but not editable.</div>
-      </div>
-
-      <div class="use-case-card">
-        <div class="scenario">Planning a topic overview</div>
-        <h3>Knowledge Mats</h3>
-        <p>Dense, detailed PowerPoints covering every key fact for each Edexcel topic. Part 1 and Part 2 per topic. Best used by teachers for planning or printed as A3 reference posters for classroom walls.</p>
-        <div class="resources-list">
-          <a href="https://auth.pixl.org.uk/members/#!/resources/44587124" target="_blank" class="resource-link">Bio Knowledge Mats</a>
-          <a href="https://auth.pixl.org.uk/members/#!/resources/45507814" target="_blank" class="resource-link">Chem Knowledge Mats</a>
-          <a href="https://auth.pixl.org.uk/members/#!/resources/44587123" target="_blank" class="resource-link">Phys Knowledge Mats</a>
-        </div>
-        <div class="tip-box"><strong>Top tip:</strong> These are information-dense. Do not hand them to students as-is. Instead, use them to check your own subject knowledge or print as A3 wall displays.</div>
-      </div>
-
-      <div class="use-case-card">
-        <div class="scenario">Fun revision (videos)</div>
-        <h3>Singing Scientist</h3>
-        <p>Revision videos set to music. Cross-board content, good for engaging reluctant revisers or as a low-stakes end-of-lesson activity.</p>
-        <div class="resources-list">
-          <a href="https://auth.pixl.org.uk/members/#!/resources/48869984" target="_blank" class="resource-link">PiXL Science Revise</a>
-        </div>
-      </div>
-
+    <div style="flex:1;">
+      <label for="topic">Topic</label>
+      <select id="topic" onchange="buildLesson()" disabled>
+        <option value="">Choose subject first...</option>
+      </select>
     </div>
-
   </div>
 
-  <!-- ==================== ALL RESOURCES ==================== -->
-  <div class="tab-content" id="tab-resources">
-
-    <div class="section-intro">
-      <h2>All Edexcel resources by type</h2>
-      <p>Every resource below links directly to the right PiXL folder. Click the subject buttons to go straight there. All links require your PiXL login.</p>
+  <div id="lessonPlan">
+    <div class="no-topic">
+      <span class="arrow">&#9757;</span>
+      Pick a subject and topic above to build your lesson plan
     </div>
+  </div>
 
-    <!-- KnowIT, GraspIT, ThinkIT -->
-    <div class="resource-section">
-      <h2>KnowIT, GraspIT, ThinkIT - "The ITs Family"</h2>
+  <div class="info-box" style="margin-top:1.5rem;">
+    <strong>How it works:</strong> Select a subject and topic, then click "Open" next to each lesson phase to go straight to the right PiXL resource. Download what you need. Mix and match phases to suit your lesson.
+  </div>
 
-      <div class="resource-card">
-        <h3>KnowIT <span class="audience-tag tag-both">Teacher + Students</span></h3>
-        <div class="what">Knowledge PowerPoints with recall questions for each Edexcel topic. The PPT teaches the content; the Questions doc tests recall.</div>
-        <div class="detail-grid">
-          <div class="detail-item">
-            <span class="label">What you get per topic</span>
-            <span class="value">1x KnowIT PowerPoint (.pptx) + 1x KnowIT Questions (.docx)</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">When to use</span>
-            <span class="value">Lesson delivery, revision sessions, homework recall quizzes</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Who it is for</span>
-            <span class="value">PPT: teachers to deliver. Questions: students to complete</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Format</span>
-            <span class="value"><span class="format-badge format-pptx">PPTX</span> <span class="format-badge format-docx">DOCX</span> Editable</span>
-          </div>
-        </div>
-        <div class="subject-links">
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897666" target="_blank" class="subject-link link-bio">Biology</a>
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897676" target="_blank" class="subject-link link-chem">Chemistry</a>
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897686" target="_blank" class="subject-link link-phys">Physics</a>
-        </div>
-        <div class="tip-box"><strong>How to use:</strong> Deliver the KnowIT PPT in a lesson or revision session to teach/recap the key content. Then give students the KnowIT Questions doc as a retrieval quiz - they should answer from memory first, then self-check.</div>
-      </div>
+</div>
 
-      <div class="resource-card">
-        <h3>GraspIT <span class="audience-tag tag-students">Students</span></h3>
-        <div class="what">Application-style questions for each Edexcel topic. These go beyond recall - students must apply their knowledge. Three versions available for each topic.</div>
-        <div class="detail-grid">
-          <div class="detail-item">
-            <span class="label">What you get per topic</span>
-            <span class="value">3 docs: Write On (students write on sheet), Reusable (answer on separate paper), Answers (mark scheme)</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">When to use</span>
-            <span class="value">Homework, independent revision, assessment prep</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Who it is for</span>
-            <span class="value">All students. Write On is best for homework. Reusable for repeated practice</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Format</span>
-            <span class="value"><span class="format-badge format-docx">DOCX</span> Editable - you can modify questions</span>
-          </div>
-        </div>
-        <div class="subject-links">
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897666" target="_blank" class="subject-link link-bio">Biology</a>
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897676" target="_blank" class="subject-link link-chem">Chemistry</a>
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897686" target="_blank" class="subject-link link-phys">Physics</a>
-        </div>
-        <div class="tip-box"><strong>How to use:</strong> Print the "Write On" version for homework - it is self-contained with space to answer. Students can self-mark using the Answers version. The "Reusable" version is ideal for repeat practice during revision - answer on a separate sheet and try again later.</div>
-      </div>
+<!-- ==================== MORE RESOURCES ==================== -->
+<div class="tab-content" id="tab-extras">
 
-      <div class="resource-card">
-        <h3>ThinkIT <span class="audience-tag tag-teacher">Teacher-led</span></h3>
-        <div class="what">Higher-order challenge questions for each Edexcel topic. Designed to push grades 7-9 students beyond standard application.</div>
-        <div class="detail-grid">
-          <div class="detail-item">
-            <span class="label">What you get per topic</span>
-            <span class="value">1x ThinkIT PowerPoint (.pptx) with challenge questions and discussion prompts</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">When to use</span>
-            <span class="value">Extension work, triple science lessons, gifted intervention</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Who it is for</span>
-            <span class="value">Higher-attaining students. Teacher delivers the PPT</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Format</span>
-            <span class="value"><span class="format-badge format-pptx">PPTX</span> Editable</span>
-          </div>
-        </div>
-        <div class="subject-links">
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897666" target="_blank" class="subject-link link-bio">Biology</a>
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897676" target="_blank" class="subject-link link-chem">Chemistry</a>
-          <a href="https://auth.pixl.org.uk/members/#!/feature/1/49897686" target="_blank" class="subject-link link-phys">Physics</a>
-        </div>
-      </div>
+  <h2 style="font-family:Arial;color:var(--navy);margin-bottom:1rem;">Beyond the lesson plan</h2>
+  <p style="margin-bottom:1rem;color:var(--grey);">These resources don't fit neatly into a single lesson phase but are useful for revision, intervention, and planning.</p>
 
-      <div class="resource-card">
-        <h3>GetIT <span class="audience-tag tag-students">Lower Attainers</span></h3>
-        <div class="what">Simplified resources for students working towards grades 1-2. Scaffolded questions with accessible language. Cross-board (not Edexcel-specific, but the science content applies).</div>
-        <div class="detail-grid">
-          <div class="detail-item">
-            <span class="label">When to use</span>
-            <span class="value">Intervention, catch-up sessions, differentiated homework for lower sets</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Who it is for</span>
-            <span class="value">Students aiming for grades 1-2, or those who need scaffolded entry points</span>
-          </div>
-        </div>
-        <div class="subject-links">
-          <a href="https://auth.pixl.org.uk/members/#!/resources/44160992" target="_blank" class="subject-link link-all">GetIT resources</a>
-        </div>
+  <div class="extras-grid">
+
+    <div class="extra-card">
+      <h3>Knowledge Mats</h3>
+      <p>Dense single-page topic summaries. Best for teacher planning, A3 wall displays, or stuck-in-book revision references. 2-3 parts per topic.</p>
+      <div class="extra-links">
+        <a href="https://auth.pixl.org.uk/members/#!/resources/44587124" target="_blank" onclick="return pixlCheck()">Biology</a>
+        <a href="https://auth.pixl.org.uk/members/#!/resources/45507814" target="_blank" onclick="return pixlCheck()">Chemistry</a>
+        <a href="https://auth.pixl.org.uk/members/#!/resources/44587123" target="_blank" onclick="return pixlCheck()">Physics</a>
       </div>
     </div>
 
-    <!-- KNOWLEDGE MATS -->
-    <div class="resource-section">
-      <h2>Knowledge Mats (Edexcel-specific)</h2>
-
-      <div class="resource-card">
-        <h3>Knowledge Mats <span class="audience-tag tag-teacher">Teacher reference</span></h3>
-        <div class="what">Detailed knowledge PowerPoints for every Edexcel topic. Each topic has Part 1 and Part 2 covering all the key facts, definitions, diagrams, and equations students need. Information-dense - designed as comprehensive reference rather than student handouts.</div>
-        <div class="detail-grid">
-          <div class="detail-item">
-            <span class="label">What you get</span>
-            <span class="value">2 PPTs per topic (Part 1 + Part 2). Biology: 9 topics (18 files). Similar for Chemistry and Physics</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">When to use</span>
-            <span class="value">Teacher planning, subject knowledge checks, A3 wall displays, revision reference sheets</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Who it is for</span>
-            <span class="value">Primarily teachers. Can be printed for students as reference but they are dense - guide students through them</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Format</span>
-            <span class="value"><span class="format-badge format-pptx">PPTX</span> Editable - you can simplify before printing</span>
-          </div>
-        </div>
-        <div class="subject-links">
-          <a href="https://auth.pixl.org.uk/members/#!/resources/44587124" target="_blank" class="subject-link link-bio">Biology</a>
-          <a href="https://auth.pixl.org.uk/members/#!/resources/45507814" target="_blank" class="subject-link link-chem">Chemistry</a>
-          <a href="https://auth.pixl.org.uk/members/#!/resources/44587123" target="_blank" class="subject-link link-phys">Physics</a>
-        </div>
-        <div class="tip-box"><strong>How to use:</strong> These are best used by teachers to check their own coverage or printed as A3 classroom wall displays. If giving to students, pair with a specific task (e.g. "highlight 5 facts you did not know" or "use this to answer the GraspIT questions"). Do not just hand them out - they will overwhelm without a purpose.</div>
+    <div class="extra-card">
+      <h3>Spine Mats</h3>
+      <p>One-page "spine" of each topic. Filled version (reference) + blank version (students complete from memory). Great retrieval practice.</p>
+      <div class="extra-links">
+        <a href="https://auth.pixl.org.uk/members/feature/1/49895311" target="_blank" onclick="return pixlCheck()">All Spine Mats</a>
       </div>
     </div>
 
-    <!-- SPINE -->
-    <div class="resource-section">
-      <h2>PiXL Spine (Cross-board foundational knowledge)</h2>
-
-      <div class="resource-card">
-        <h3>Spine Mats - Filled version <span class="audience-tag tag-both">Teacher + Students</span></h3>
-        <div class="what">One-page knowledge mats covering the essential "spine" of each major science topic. The filled version has all the key facts completed - use as a revision reference or check your students' knowledge against it.</div>
-        <div class="detail-grid">
-          <div class="detail-item">
-            <span class="label">Topics covered</span>
-            <span class="value">Cells & Organisms, Energy, Evolution & Extinction, Forces & Motion, Inheritance & Genetics, Interdependence & Competition, Non-Contact Forces, Particles, Scientific Method, Scientific Theories & Models, Space, The Earth</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">When to use</span>
-            <span class="value">Revision reference, knowledge check, wall display, read-cover-write-check activities</span>
-          </div>
-        </div>
-        <div class="subject-links">
-          <a href="https://auth.pixl.org.uk/members/feature/1/49895311" target="_blank" class="subject-link link-all">All Spine Mats</a>
-        </div>
-        <div class="tip-box"><strong>How to direct students:</strong> Print the filled Spine Mat for a topic. Give students 5 minutes to read it carefully. Then take it away and give them the blank version. They fill in as much as they can from memory. This is retrieval practice and it works. Anything they could not remember goes on their "need to revise" list.</div>
-      </div>
-
-      <div class="resource-card">
-        <h3>Spine Mats - Blank version <span class="audience-tag tag-students">Students</span></h3>
-        <div class="what">The same one-page knowledge mats but with all the content removed. Students fill them in from memory as a retrieval exercise. Each topic has both a filled and blank version.</div>
-        <div class="detail-grid">
-          <div class="detail-item">
-            <span class="label">When to use</span>
-            <span class="value">Retrieval practice, revision homework, assessment of knowledge gaps</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Who it is for</span>
-            <span class="value">All students. Pair with the filled version for self-assessment</span>
-          </div>
-        </div>
-        <div class="subject-links">
-          <a href="https://auth.pixl.org.uk/members/feature/1/49895311" target="_blank" class="subject-link link-all">All Spine Mats (filled + blank are in same folder)</a>
-        </div>
-      </div>
-
-      <div class="resource-card">
-        <h3>Spine Extension Booklets <span class="audience-tag tag-students">Students</span></h3>
-        <div class="what">Longer booklets that go deeper into each Spine topic. Include activities, tasks, and questions that push students to apply their foundational knowledge in more challenging contexts.</div>
-        <div class="detail-grid">
-          <div class="detail-item">
-            <span class="label">When to use</span>
-            <span class="value">Independent study, extension homework, stretch for higher attainers, holiday revision</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Who it is for</span>
-            <span class="value">Students who have mastered the basics and need to go further</span>
-          </div>
-        </div>
-        <div class="subject-links">
-          <a href="https://auth.pixl.org.uk/members/feature/1/49895311" target="_blank" class="subject-link link-all">Extension Booklets (in Spine folder)</a>
-        </div>
+    <div class="extra-card">
+      <h3>Command Words DTT</h3>
+      <p>Diagnose-Therapy-Test packs for exam command words. Bio, Chem, Phys (2 packs each). Editable .docx versions available.</p>
+      <div class="extra-links">
+        <a href="https://auth.pixl.org.uk/members/#!/resources/48944388" target="_blank" onclick="return pixlCheck()">Command Words</a>
       </div>
     </div>
 
-    <!-- THERAPY & TESTING -->
-    <div class="resource-section">
-      <h2>Therapy & Testing (Cross-board intervention)</h2>
-
-      <div class="resource-card">
-        <h3>Examination Response PPTs <span class="audience-tag tag-teacher">Teacher-led</span></h3>
-        <div class="what">Ready-made intervention presentations targeting the topics students consistently lose marks on in exams. Based on examiner report data. Topics include osmosis, cell division, body systems, maths & graphs in science, and command words.</div>
-        <div class="detail-grid">
-          <div class="detail-item">
-            <span class="label">What you get</span>
-            <span class="value">PPTs per weak topic + Edexcel-specific command word PDFs</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">When to use</span>
-            <span class="value">Targeted intervention sessions, after mock analysis, period 6 sessions</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Cross-board?</span>
-            <span class="value">Yes - but the science is universal. There ARE Edexcel-specific command word PDFs in the Biology folder</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Format</span>
-            <span class="value"><span class="format-badge format-pptx">PPTX</span> <span class="format-badge format-pdf">PDF</span></span>
-          </div>
-        </div>
-        <div class="subject-links">
-          <a href="https://auth.pixl.org.uk/members/#!/resources/46501185" target="_blank" class="subject-link link-bio">Biology</a>
-          <a href="https://auth.pixl.org.uk/members/#!/resources/46501187" target="_blank" class="subject-link link-chem">Chemistry</a>
-          <a href="https://auth.pixl.org.uk/members/#!/resources/46501189" target="_blank" class="subject-link link-phys">Physics</a>
-        </div>
-        <div class="tip-box"><strong>How to use:</strong> After mocks, identify which topics your students scored lowest on. Find the matching Therapy & Testing PPT and deliver it as a focused 20-minute intervention. The PPTs walk through common misconceptions and model correct exam responses.</div>
+    <div class="extra-card">
+      <h3>Therapy & Testing</h3>
+      <p>Ready-made presentations targeting common exam weaknesses (osmosis, cell division, maths in science, etc.). Includes Edexcel command word PDFs.</p>
+      <div class="extra-links">
+        <a href="https://auth.pixl.org.uk/members/#!/resources/46501185" target="_blank" onclick="return pixlCheck()">Biology</a>
+        <a href="https://auth.pixl.org.uk/members/#!/resources/46501187" target="_blank" onclick="return pixlCheck()">Chemistry</a>
+        <a href="https://auth.pixl.org.uk/members/#!/resources/46501189" target="_blank" onclick="return pixlCheck()">Physics</a>
       </div>
     </div>
 
-    <!-- PIXL SCIENCE REVISE -->
-    <div class="resource-section">
-      <h2>PiXL Science Revise</h2>
-
-      <div class="resource-card">
-        <h3>Command Words DTT Packs <span class="audience-tag tag-students">Students</span></h3>
-        <div class="what">Diagnose-Therapy-Test packs focused on exam command words (describe, explain, compare, evaluate, etc.). Students diagnose which command words they struggle with, work through therapy examples, then test themselves.</div>
-        <div class="detail-grid">
-          <div class="detail-item">
-            <span class="label">What you get</span>
-            <span class="value">6 packs total: Biology x2, Chemistry x2, Physics x2. Available as .docx (editable) and .pdf (print-ready)</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">When to use</span>
-            <span class="value">Exam technique lessons, homework, intervention for students who "know the content but cannot answer the question"</span>
-          </div>
-        </div>
-        <div class="subject-links">
-          <a href="https://auth.pixl.org.uk/members/#!/resources/48944388" target="_blank" class="subject-link link-all">All Command Words DTT</a>
-        </div>
-        <div class="tip-box"><strong>How to use:</strong> Perfect for students who understand the science but lose marks because they do not answer the question properly. The DTT format means they self-diagnose their weaknesses first - much more efficient than blanket teaching.</div>
+    <div class="extra-card">
+      <h3>GetIT (Lower Attainers)</h3>
+      <p>Scaffolded resources for grades 1-2. Simplified language, accessible questions. Cross-board.</p>
+      <div class="extra-links">
+        <a href="https://auth.pixl.org.uk/members/#!/resources/44160992" target="_blank" onclick="return pixlCheck()">GetIT Resources</a>
       </div>
+    </div>
 
-      <div class="resource-card">
-        <h3>Singing Scientist Videos <span class="audience-tag tag-students">Students</span></h3>
-        <div class="what">Revision content set to music. Cross-board. A different way in for students who struggle with traditional revision or need variety.</div>
-        <div class="detail-grid">
-          <div class="detail-item">
-            <span class="label">When to use</span>
-            <span class="value">End of lesson, revision variety, homework option for reluctant revisers</span>
-          </div>
-        </div>
-        <div class="subject-links">
-          <a href="https://auth.pixl.org.uk/members/#!/resources/48869984" target="_blank" class="subject-link link-all">PiXL Science Revise folder</a>
-        </div>
+    <div class="extra-card">
+      <h3>PiXL Science Revise</h3>
+      <p>Singing Scientist revision videos, practical GetITs, and more. Good for engaging reluctant revisers.</p>
+      <div class="extra-links">
+        <a href="https://auth.pixl.org.uk/members/#!/resources/48869984" target="_blank" onclick="return pixlCheck()">Science Revise</a>
       </div>
+    </div>
 
-      <div class="resource-card">
-        <h3>Practical Science GetITs <span class="audience-tag tag-students">Lower Attainers</span></h3>
-        <div class="what">Simplified resources covering required practicals. Cross-board. Designed for students who find the standard practical write-ups too challenging.</div>
-        <div class="subject-links">
-          <a href="https://auth.pixl.org.uk/members/#!/resources/48869984" target="_blank" class="subject-link link-all">PiXL Science Revise folder</a>
-        </div>
+    <div class="extra-card">
+      <h3>Exam Topics Summary</h3>
+      <p>Overview of every Edexcel exam paper: topics, marks, length. Essential for curriculum planning.</p>
+      <div class="extra-links">
+        <a href="https://auth.pixl.org.uk/members/#!/resources/44161475" target="_blank" onclick="return pixlCheck()">Edexcel Summaries</a>
       </div>
     </div>
 
   </div>
+</div>
 
-  <!-- ==================== GLOSSARY ==================== -->
-  <div class="tab-content" id="tab-glossary">
+<!-- ==================== QUICK GUIDE ==================== -->
+<div class="tab-content" id="tab-guide">
 
-    <div class="section-intro">
-      <h2>PiXL Jargon Buster</h2>
-      <p>PiXL loves its acronyms. Here is what everything actually means in plain English.</p>
+  <h2 style="font-family:Arial;color:var(--navy);margin-bottom:0.5rem;">What is each resource?</h2>
+  <p style="margin-bottom:1.5rem;color:var(--grey);">PiXL gives each resource type a name. Here's what they actually are in plain English.</p>
+
+  <div class="guide-grid">
+    <div class="guide-card">
+      <h3>KnowIT</h3>
+      <p>A PowerPoint that teaches the key facts for a topic, plus a separate Word doc with recall questions. The PPT is for you to present. The questions are for students to answer from memory.</p>
+      <span class="when">Use for: Do Now, I Do, retrieval quizzes</span>
     </div>
-
-    <div class="glossary-grid">
-      <div class="glossary-item">
-        <h4><span class="level-indicator" style="background: var(--bio-green)"></span> KnowIT</h4>
-        <p>A PowerPoint that teaches the key knowledge for a topic, plus a separate question sheet to test recall. Think of it as "teach then test".</p>
-      </div>
-      <div class="glossary-item">
-        <h4><span class="level-indicator" style="background: var(--chem-blue)"></span> GraspIT</h4>
-        <p>Application questions - students must USE their knowledge, not just recall it. Comes in Write On (write on the sheet), Reusable (answer on paper), and Answers (mark scheme) versions.</p>
-      </div>
-      <div class="glossary-item">
-        <h4><span class="level-indicator" style="background: var(--coral)"></span> ThinkIT</h4>
-        <p>Higher-order challenge questions for top students. The hardest of the ITs family.</p>
-      </div>
-      <div class="glossary-item">
-        <h4><span class="level-indicator" style="background: var(--gold)"></span> GetIT</h4>
-        <p>Simplified, scaffolded resources for students aiming at grades 1-2. The most accessible of the ITs family.</p>
-      </div>
-      <div class="glossary-item">
-        <h4><span class="level-indicator" style="background: var(--teal)"></span> DTT</h4>
-        <p>Diagnose-Therapy-Test. A three-step process: students diagnose what they are weak on, work through therapy activities to fix it, then test to check it worked.</p>
-      </div>
-      <div class="glossary-item">
-        <h4><span class="level-indicator" style="background: var(--navy)"></span> Spine</h4>
-        <p>The essential core knowledge students must have for each topic. Think of it as the skeleton of knowledge that everything else builds on. Spine Mats are one-page summaries of this core knowledge.</p>
-      </div>
-      <div class="glossary-item">
-        <h4><span class="level-indicator" style="background: #9C27B0"></span> Knowledge Mat</h4>
-        <p>A detailed, information-dense overview of all key facts for a topic. More comprehensive than a Spine Mat. Edexcel-specific. Split into Part 1 and Part 2.</p>
-      </div>
-      <div class="glossary-item">
-        <h4><span class="level-indicator" style="background: #795548"></span> Therapy & Testing</h4>
-        <p>Intervention resources targeting specific weak areas identified from examiner reports. Ready-made lessons for the topics students consistently lose marks on.</p>
-      </div>
-      <div class="glossary-item">
-        <h4><span class="level-indicator" style="background: #607D8B"></span> RUAL</h4>
-        <p>Read-Understand-Analyse-Learn. A structured reading and analysis framework used in some PiXL resources.</p>
-      </div>
-      <div class="glossary-item">
-        <h4><span class="level-indicator" style="background: #FF5722"></span> Strive for Success</h4>
-        <p>Cross-subject resources that help teachers, students, and parents tackle common challenges (motivation, exam anxiety, revision strategies).</p>
-      </div>
+    <div class="guide-card">
+      <h3>GraspIT</h3>
+      <p>Application questions (not just recall). Comes in 3 versions: <strong>Write On</strong> (students write answers on the sheet), <strong>Reusable</strong> (answer on separate paper, reuse the sheet), <strong>Answers</strong> (your mark scheme).</p>
+      <span class="when">Use for: We Do, You Do, homework, revision</span>
     </div>
-
+    <div class="guide-card">
+      <h3>ThinkIT</h3>
+      <p>Challenge questions for your top students (grades 7-9). PowerPoint format. Higher-order thinking, not just harder recall.</p>
+      <span class="when">Use for: Exit ticket stretch, extension, triple science</span>
+    </div>
+    <div class="guide-card">
+      <h3>GetIT</h3>
+      <p>Simplified, scaffolded resources for students working at grades 1-2. Accessible language, basic recall. Cross-board (not Edexcel-specific but content applies).</p>
+      <span class="when">Use for: Intervention, SEN support, catch-up</span>
+    </div>
+    <div class="guide-card">
+      <h3>Knowledge Mat</h3>
+      <p>A dense, detailed single-page summary of everything in a topic. Information-heavy. Best for teachers to check their own knowledge, or print as A3 wall displays. Not for handing to students as-is.</p>
+      <span class="when">Use for: Planning, wall display, teacher reference</span>
+    </div>
+    <div class="guide-card">
+      <h3>Spine Mat</h3>
+      <p>A simpler one-page summary of the core "spine" of a topic. Comes in filled (reference) and blank (students complete from memory) versions. Much more student-friendly than Knowledge Mats.</p>
+      <span class="when">Use for: Retrieval practice, vocab check, revision</span>
+    </div>
+    <div class="guide-card">
+      <h3>Command Words DTT</h3>
+      <p>Diagnose-Therapy-Test packs focused on exam command words (describe, explain, compare, evaluate, etc.). Students identify their weak command words, practise, then test themselves.</p>
+      <span class="when">Use for: Exam technique lessons, intervention</span>
+    </div>
+    <div class="guide-card">
+      <h3>Therapy & Testing</h3>
+      <p>Ready-made PowerPoints on the topics examiners say students struggle with most. Based on examiner report analysis. Includes Edexcel-specific command word PDFs.</p>
+      <span class="when">Use for: Targeted intervention, reteaching weak areas</span>
+    </div>
   </div>
+
+  <div class="info-box" style="margin-top:1.5rem;">
+    <strong>The lesson structure in a nutshell:</strong><br>
+    <strong>Do Now</strong> = retrieval (KnowIT Questions or Spine Mat blank)<br>
+    <strong>Vocab/Glossary</strong> = key terms (Knowledge Mat or Spine Mat filled)<br>
+    <strong>I Do</strong> = teacher models (KnowIT PPT)<br>
+    <strong>We Do</strong> = guided practice together (GraspIT Answers on board)<br>
+    <strong>You Do</strong> = independent practice (GraspIT Write On)<br>
+    <strong>Exit Ticket</strong> = check understanding (ThinkIT or quick questions)
+  </div>
+</div>
 
 </main>
 
 <footer>
-  <p>Built for HAB Crayford Science Department | All links require your school's PiXL login</p>
-  <p style="margin-top:0.3rem">Created by <a href="https://advisoryscience.com" target="_blank">Advisory Science</a></p>
+  HAB Crayford Academy | Edexcel GCSE Science | PiXL Resource Planner<br>
+  All links require your school PiXL login. Log in to PiXL in this browser first.
 </footer>
 
 <script>
-  // Tab navigation
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  const tabContents = document.querySelectorAll('.tab-content');
+// ── Topic data ──────────────────────────────────────────────────────────
+const TOPICS = {
+  bio: [
+    "Key concepts in biology",
+    "Cells and control",
+    "Genetics",
+    "Natural selection and genetic modification",
+    "Health, disease and the development of medicines",
+    "Plant structures and their functions",
+    "Animal coordination, control and homeostasis",
+    "Exchange and transport in animals",
+    "Ecosystems and material cycles"
+  ],
+  chem: [
+    "Key concepts in chemistry",
+    "States of matter and mixtures",
+    "Chemical changes",
+    "Extracting metals and equilibria",
+    "Separate chemistry 1",
+    "Groups in the periodic table",
+    "Rates of reaction and energy changes",
+    "Fuels and Earth science",
+    "Separate chemistry 2"
+  ],
+  phys: [
+    "Key concepts of physics",
+    "Motion and forces",
+    "Conservation of energy",
+    "Waves",
+    "Light and the electromagnetic spectrum",
+    "Radioactivity",
+    "Astronomy",
+    "Energy - Forces doing work",
+    "Forces and their effects",
+    "Electricity and circuits and static electricity",
+    "Magnetism, the motor effect and electromagnetic induction",
+    "Particle model",
+    "Forces and matter"
+  ]
+};
 
-  function showTab(tabId) {
-    tabBtns.forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.tab === tabId);
-    });
-    tabContents.forEach(content => {
-      content.classList.toggle('active', content.id === 'tab-' + tabId);
-    });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+// PiXL folder links (verified working 26 Mar 2026)
+const LINKS = {
+  bio: {
+    its: "https://auth.pixl.org.uk/members/#!/feature/1/49897666",
+    km: "https://auth.pixl.org.uk/members/#!/resources/44587124",
+    spine: "https://auth.pixl.org.uk/members/feature/1/49895311"
+  },
+  chem: {
+    its: "https://auth.pixl.org.uk/members/#!/feature/1/49897676",
+    km: "https://auth.pixl.org.uk/members/#!/resources/45507814",
+    spine: "https://auth.pixl.org.uk/members/feature/1/49895311"
+  },
+  phys: {
+    its: "https://auth.pixl.org.uk/members/#!/feature/1/49897686",
+    km: "https://auth.pixl.org.uk/members/#!/resources/44587123",
+    spine: "https://auth.pixl.org.uk/members/feature/1/49895311"
+  }
+};
+
+let pixlLoggedIn = false;
+
+function openPixl() {
+  window.open("https://auth.pixl.org.uk/members/#!/subjects/Science", "_blank");
+  pixlLoggedIn = true;
+  document.getElementById("loginBtn").textContent = "PiXL Open";
+  document.getElementById("loginBtn").style.background = "var(--teal)";
+  document.getElementById("loginBanner").style.display = "none";
+}
+
+function pixlCheck() {
+  if (!pixlLoggedIn) {
+    const ok = confirm("Have you logged into PiXL in this browser?\n\nClick OK if yes, or Cancel to log in first.");
+    if (!ok) { openPixl(); return false; }
+    pixlLoggedIn = true;
+    document.getElementById("loginBtn").textContent = "PiXL Open";
+    document.getElementById("loginBtn").style.background = "var(--teal)";
+    document.getElementById("loginBanner").style.display = "none";
+  }
+  return true;
+}
+
+function updateTopics() {
+  const subj = document.getElementById("subject").value;
+  const topicSel = document.getElementById("topic");
+  topicSel.innerHTML = "";
+
+  if (!subj) {
+    topicSel.innerHTML = '<option value="">Choose subject first...</option>';
+    topicSel.disabled = true;
+    document.getElementById("lessonPlan").innerHTML =
+      '<div class="no-topic"><span class="arrow">&#9757;</span>Pick a subject and topic above to build your lesson plan</div>';
+    return;
   }
 
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => showTab(btn.dataset.tab));
+  topicSel.disabled = false;
+  topicSel.innerHTML = '<option value="">Choose topic...</option>';
+  TOPICS[subj].forEach((t, i) => {
+    const opt = document.createElement("option");
+    opt.value = i;
+    opt.textContent = `${i+1}. ${t}`;
+    topicSel.appendChild(opt);
   });
-  /* ═══ SUPABASE SILENT TRACKING + FEEDBACK ═══ */
-  const SB_URL = 'https://awnmaakxaqevodjjuzsm.supabase.co';
-  const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF3bm1hYWt4YXFldm9kamp1enNtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0MzgwNzIsImV4cCI6MjA5MDAxNDA3Mn0.uwpcN1iqJos6llw4XAZLSYLqZc0AnVJK8tVTYbxmiZs';
+}
 
-  function sbPost(table, data) {
-    fetch(SB_URL + '/rest/v1/' + table, {
-      method: 'POST',
-      headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
-      body: JSON.stringify(data)
-    }).catch(() => {});
-  }
+function buildLesson() {
+  const subj = document.getElementById("subject").value;
+  const topicIdx = document.getElementById("topic").value;
+  if (!subj || topicIdx === "") return;
 
-  // Silent: log page open
-  sbPost('activity_log', { student_name: 'TEACHER', action: 'teacher_app_open', topic_id: null, topic_name: null, quiz_type: null, score: null, total: null });
+  const topic = TOPICS[subj][topicIdx];
+  const link = LINKS[subj].its;
+  const kmLink = LINKS[subj].km;
+  const spineLink = LINKS[subj].spine;
 
-  // Silent: log tab switches
-  const origShowTab = showTab;
-  showTab = function(tabId) {
-    origShowTab(tabId);
-    sbPost('activity_log', { student_name: 'TEACHER', action: 'teacher_tab_view', topic_id: tabId, topic_name: tabId, quiz_type: null, score: null, total: null });
-  };
+  const phases = [
+    {
+      num: 1,
+      name: "Do Now / Retrieval",
+      desc: "5 mins. Students answer recall questions from memory. No notes.",
+      resource: "KnowIT Questions (.docx) or blank Spine Mat",
+      link: link,
+      linkLabel: "Open KnowIT"
+    },
+    {
+      num: 2,
+      name: "Vocab / Glossary",
+      desc: "Display key terms for the topic. Students self-check gaps.",
+      resource: "Knowledge Mat or filled Spine Mat",
+      link: kmLink,
+      linkLabel: "Open Knowledge Mats"
+    },
+    {
+      num: 3,
+      name: "I Do (Teacher Models)",
+      desc: "Teacher presents key knowledge. Walk through examples on board.",
+      resource: "KnowIT PowerPoint (.pptx)",
+      link: link,
+      linkLabel: "Open KnowIT"
+    },
+    {
+      num: 4,
+      name: "We Do (Guided Practice)",
+      desc: "Work through application questions together as a class.",
+      resource: "GraspIT Answers (project on board, discuss together)",
+      link: link,
+      linkLabel: "Open GraspIT"
+    },
+    {
+      num: 5,
+      name: "You Do (Independent Practice)",
+      desc: "Students work through questions on their own.",
+      resource: "GraspIT Write On (.docx) - print or display",
+      link: link,
+      linkLabel: "Open GraspIT"
+    },
+    {
+      num: 6,
+      name: "Exit Ticket / Stretch",
+      desc: "Quick check or challenge for early finishers.",
+      resource: "ThinkIT (.pptx) for stretch, or revisit KnowIT Questions",
+      link: link,
+      linkLabel: "Open ThinkIT"
+    }
+  ];
 
-  // Feedback modal
-  function openFeedback() { document.getElementById('fbModal').classList.add('open'); }
-  function closeFeedback() { document.getElementById('fbModal').classList.remove('open'); }
-  function submitFeedback() {
-    const text = document.getElementById('fbText').value.trim();
-    if (!text) return;
-    const name = document.getElementById('fbName').value.trim() || 'Anonymous';
-    sbPost('activity_log', { student_name: 'TEACHER: ' + name, action: 'teacher_feedback', topic_id: null, topic_name: text, quiz_type: null, score: null, total: null });
-    document.getElementById('fbText').value = '';
-    document.getElementById('fbConfirm').style.display = 'block';
-    setTimeout(() => { closeFeedback(); document.getElementById('fbConfirm').style.display = 'none'; }, 2000);
-  }
-</script>
+  const subjectName = {bio: "Biology", chem: "Chemistry", phys: "Physics"}[subj];
+  const subjectColor = {bio: "var(--bio)", chem: "var(--chem)", phys: "var(--phys)"}[subj];
 
-<!-- FEEDBACK BUTTON -->
-<div style="position:fixed;bottom:20px;right:20px;z-index:900">
-  <button onclick="openFeedback()" style="background:var(--teal);color:#fff;border:none;padding:12px 20px;border-radius:30px;font-family:'Segoe UI',Calibri,Arial,sans-serif;font-weight:700;font-size:0.85rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15);transition:all .2s">Give Feedback</button>
-</div>
+  let html = `<div style="background:${subjectColor};color:var(--white);padding:0.6rem 1rem;border-radius:10px 10px 0 0;font-weight:700;font-family:Arial;">
+    ${subjectName}: ${topic}
+  </div>`;
+  html += '<div class="lesson-flow">';
 
-<!-- FEEDBACK MODAL -->
-<div id="fbModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center">
-  <div style="background:var(--cream);border-radius:14px;max-width:420px;width:90%;padding:28px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.2)">
-    <h3 style="color:var(--navy);font-size:1.1rem;margin-bottom:6px">Your Feedback</h3>
-    <p style="color:#666;font-size:.88rem;margin-bottom:16px">How are you finding this resource? Any suggestions?</p>
-    <input id="fbName" type="text" placeholder="Your name (optional)" maxlength="40" style="width:100%;padding:10px 14px;border:2px solid #ddd;border-radius:8px;font-size:.95rem;margin-bottom:10px">
-    <textarea id="fbText" rows="4" placeholder="Type your feedback here..." style="width:100%;padding:10px 14px;border:2px solid #ddd;border-radius:8px;font-family:inherit;font-size:.95rem;resize:vertical;margin-bottom:12px"></textarea>
-    <div id="fbConfirm" style="display:none;color:var(--teal);font-weight:700;margin-bottom:10px">Thanks! Feedback sent.</div>
-    <div style="display:flex;gap:10px;justify-content:center">
-      <button onclick="closeFeedback()" style="padding:10px 20px;border:2px solid #ddd;border-radius:8px;background:#fff;color:#666;font-weight:700;cursor:pointer">Cancel</button>
-      <button onclick="submitFeedback()" style="padding:10px 20px;border:none;border-radius:8px;background:var(--teal);color:#fff;font-weight:700;cursor:pointer">Send</button>
-    </div>
-  </div>
-</div>
-<script>
-  document.getElementById('fbModal').addEventListener('click', function(e) { if (e.target === this) closeFeedback(); });
-  // Fix modal display
-  document.getElementById('fbModal').style.cssText += 'display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center;';
-  function openFeedbackFix() { const m = document.getElementById('fbModal'); m.style.display = 'flex'; }
-  // Override
-  document.querySelector('[onclick="openFeedback()"]').setAttribute('onclick', 'document.getElementById("fbModal").style.display="flex"');
+  phases.forEach(p => {
+    html += `
+      <div class="phase">
+        <div class="phase-num">${p.num}</div>
+        <div class="phase-info">
+          <div class="phase-name">${p.name}</div>
+          <div class="phase-desc">${p.desc}</div>
+          <div class="phase-resource">${p.resource}</div>
+        </div>
+        <div class="phase-link">
+          <a href="${p.link}" target="_blank" class="open-btn" onclick="return pixlCheck()">${p.linkLabel}</a>
+        </div>
+      </div>`;
+  });
+
+  html += '</div>';
+  html += `<div class="info-box" style="margin-top:0.8rem;">
+    <strong>Tip:</strong> You don't have to use every phase. Pick what fits your lesson. The links all go to the same PiXL folder for ${subjectName} - find "${topic}" inside and download the resource type you need.
+  </div>`;
+
+  document.getElementById("lessonPlan").innerHTML = html;
+}
+
+// ── Tab switching ───────────────────────────────────────────────────────
+document.querySelectorAll(".tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById("tab-" + btn.dataset.tab).classList.add("active");
+  });
+});
+
+// Check if PiXL login button was already clicked
+document.getElementById("loginBtn").addEventListener("click", (e) => {
+  e.preventDefault();
+  openPixl();
+});
 </script>
 
 </body>
