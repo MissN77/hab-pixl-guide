@@ -306,63 +306,53 @@
 
 <script>
 // ── Topic data ──────────────────────────────────────────────────────────
+// Each topic has its own PiXL resource ID (verified 26 Mar 2026)
+const BASE = "https://auth.pixl.org.uk/members/#!/resources/";
 const TOPICS = {
   bio: [
-    "Key concepts in biology",
-    "Cells and control",
-    "Genetics",
-    "Natural selection and genetic modification",
-    "Health, disease and the development of medicines",
-    "Plant structures and their functions",
-    "Animal coordination, control and homeostasis",
-    "Exchange and transport in animals",
-    "Ecosystems and material cycles"
+    { name: "Key concepts in biology", id: 46162828 },
+    { name: "Cells and control", id: 46162829 },
+    { name: "Genetics", id: 46162830 },
+    { name: "Natural selection and genetic modification", id: 46162831 },
+    { name: "Health, disease and the development of medicines", id: 46162832 },
+    { name: "Plant structures and their functions", id: 46162833 },
+    { name: "Animal coordination, control and homeostasis", id: 46162834 },
+    { name: "Exchange and transport in animals", id: 46162835 },
+    { name: "Ecosystems and material cycles", id: 46162836 }
   ],
   chem: [
-    "Key concepts in chemistry",
-    "States of matter and mixtures",
-    "Chemical changes",
-    "Extracting metals and equilibria",
-    "Separate chemistry 1",
-    "Groups in the periodic table",
-    "Rates of reaction and energy changes",
-    "Fuels and Earth science",
-    "Separate chemistry 2"
+    { name: "Key concepts in chemistry", id: 46162840 },
+    { name: "States of matter and mixtures", id: 46162841 },
+    { name: "Chemical changes", id: 46162842 },
+    { name: "Extracting metals and equilibria", id: 46162843 },
+    { name: "Separate chemistry 1", id: 46162844 },
+    { name: "Groups in the periodic table", id: 46162845 },
+    { name: "Rates of reaction and energy changes", id: 46162846 },
+    { name: "Fuels and Earth science", id: 46162847 },
+    { name: "Separate chemistry 2", id: 46162848 }
   ],
   phys: [
-    "Key concepts of physics",
-    "Motion and forces",
-    "Conservation of energy",
-    "Waves",
-    "Light and the electromagnetic spectrum",
-    "Radioactivity",
-    "Astronomy",
-    "Energy - Forces doing work",
-    "Forces and their effects",
-    "Electricity and circuits and static electricity",
-    "Magnetism, the motor effect and electromagnetic induction",
-    "Particle model",
-    "Forces and matter"
+    { name: "Key concepts of physics", id: 46162854 },
+    { name: "Motion and forces", id: 46162855 },
+    { name: "Conservation of energy", id: 46162856 },
+    { name: "Waves", id: 46162857 },
+    { name: "Light and the electromagnetic spectrum", id: 46162858 },
+    { name: "Radioactivity", id: 46162859 },
+    { name: "Astronomy", id: 46162860 },
+    { name: "Energy - Forces doing work", id: 46162861 },
+    { name: "Forces and their effects", id: 46162865 },
+    { name: "Electricity and circuits and static electricity", id: 46162862 },
+    { name: "Magnetism, the motor effect and electromagnetic induction", id: 46162863 },
+    { name: "Particle model", id: 46162864 },
+    { name: "Forces and matter", id: 46162866 }
   ]
 };
 
-// PiXL folder links (verified working 26 Mar 2026)
-const LINKS = {
-  bio: {
-    its: "https://auth.pixl.org.uk/members/#!/feature/1/49897666",
-    km: "https://auth.pixl.org.uk/members/#!/resources/44587124",
-    spine: "https://auth.pixl.org.uk/members/feature/1/49895311"
-  },
-  chem: {
-    its: "https://auth.pixl.org.uk/members/#!/feature/1/49897676",
-    km: "https://auth.pixl.org.uk/members/#!/resources/45507814",
-    spine: "https://auth.pixl.org.uk/members/feature/1/49895311"
-  },
-  phys: {
-    its: "https://auth.pixl.org.uk/members/#!/feature/1/49897686",
-    km: "https://auth.pixl.org.uk/members/#!/resources/44587123",
-    spine: "https://auth.pixl.org.uk/members/feature/1/49895311"
-  }
+// Subject-level links for Knowledge Mats and Spine Mats
+const EXTRA_LINKS = {
+  bio: { km: "https://auth.pixl.org.uk/members/#!/resources/44587124", spine: "https://auth.pixl.org.uk/members/feature/1/49895311" },
+  chem: { km: "https://auth.pixl.org.uk/members/#!/resources/45507814", spine: "https://auth.pixl.org.uk/members/feature/1/49895311" },
+  phys: { km: "https://auth.pixl.org.uk/members/#!/resources/44587123", spine: "https://auth.pixl.org.uk/members/feature/1/49895311" }
 };
 
 let pixlLoggedIn = false;
@@ -405,7 +395,7 @@ function updateTopics() {
   TOPICS[subj].forEach((t, i) => {
     const opt = document.createElement("option");
     opt.value = i;
-    opt.textContent = `${i+1}. ${t}`;
+    opt.textContent = `${i+1}. ${t.name}`;
     topicSel.appendChild(opt);
   });
 }
@@ -415,25 +405,26 @@ function buildLesson() {
   const topicIdx = document.getElementById("topic").value;
   if (!subj || topicIdx === "") return;
 
-  const topic = TOPICS[subj][topicIdx];
-  const link = LINKS[subj].its;
-  const kmLink = LINKS[subj].km;
-  const spineLink = LINKS[subj].spine;
+  const topicObj = TOPICS[subj][topicIdx];
+  const topic = topicObj.name;
+  const link = BASE + topicObj.id;  // direct link to THIS topic's folder
+  const kmLink = EXTRA_LINKS[subj].km;
+  const spineLink = EXTRA_LINKS[subj].spine;
 
   const phases = [
     {
       num: 1,
       name: "Do Now / Retrieval",
       desc: "5 mins. Students answer recall questions from memory. No notes.",
-      resource: "KnowIT Questions (.docx) or blank Spine Mat",
+      resource: "Download the file ending in '_KnowIT_GCSE_QUESTIONS.docx'",
       link: link,
-      linkLabel: "Open KnowIT"
+      linkLabel: "Open Topic Folder"
     },
     {
       num: 2,
       name: "Vocab / Glossary",
       desc: "Display key terms for the topic. Students self-check gaps.",
-      resource: "Knowledge Mat or filled Spine Mat",
+      resource: "Knowledge Mat PowerPoint for this topic",
       link: kmLink,
       linkLabel: "Open Knowledge Mats"
     },
@@ -441,33 +432,33 @@ function buildLesson() {
       num: 3,
       name: "I Do (Teacher Models)",
       desc: "Teacher presents key knowledge. Walk through examples on board.",
-      resource: "KnowIT PowerPoint (.pptx)",
+      resource: "Download the file ending in '_KnowIT_GCSE.pptx'",
       link: link,
-      linkLabel: "Open KnowIT"
+      linkLabel: "Open Topic Folder"
     },
     {
       num: 4,
       name: "We Do (Guided Practice)",
       desc: "Work through application questions together as a class.",
-      resource: "GraspIT Answers (project on board, discuss together)",
+      resource: "Download the GraspIT file with 'ANSWERS' in the name (.docx) - project on board",
       link: link,
-      linkLabel: "Open GraspIT"
+      linkLabel: "Open Topic Folder"
     },
     {
       num: 5,
       name: "You Do (Independent Practice)",
       desc: "Students work through questions on their own.",
-      resource: "GraspIT Write On (.docx) - print or display",
+      resource: "Download the GraspIT file with 'WRITE ON' in the name (.docx) - print for students",
       link: link,
-      linkLabel: "Open GraspIT"
+      linkLabel: "Open Topic Folder"
     },
     {
       num: 6,
       name: "Exit Ticket / Stretch",
       desc: "Quick check or challenge for early finishers.",
-      resource: "ThinkIT (.pptx) for stretch, or revisit KnowIT Questions",
+      resource: "Download the file ending in '_ThinkIT_GCSE.pptx'",
       link: link,
-      linkLabel: "Open ThinkIT"
+      linkLabel: "Open Topic Folder"
     }
   ];
 
