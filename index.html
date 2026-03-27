@@ -99,6 +99,7 @@
 </header>
 <nav class="tab-nav">
   <button class="tab-btn active" data-tab="planner">Lesson Planner</button>
+  <button class="tab-btn" data-tab="briefing">Teacher Briefing</button>
   <button class="tab-btn" data-tab="extras">More Resources</button>
   <button class="tab-btn" data-tab="guide">Quick Guide</button>
 </nav>
@@ -124,6 +125,79 @@
   </div>
   <div id="lessonPlan"><div class="no-topic">Pick a subject and topic to build your lesson</div></div>
   <div class="tip" style="margin-top:1rem"><strong>How it works:</strong> Pick subject + topic. Click the download button for each phase. Files download straight to your computer. No PiXL login needed.</div>
+</div>
+
+<div class="tab-content" id="tab-briefing">
+  <h2 style="font-family:Arial;color:var(--navy);margin-bottom:0.5rem;font-size:1.1rem">How to use PiXL resources in your lesson</h2>
+  <p style="margin-bottom:1rem;color:var(--grey);font-size:0.85rem">You don't need all 6 resources every lesson. Start with just the Do Now. Add more as you get comfortable.</p>
+
+  <div style="overflow-x:auto">
+  <table style="width:100%;border-collapse:collapse;font-size:0.85rem;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.06)">
+    <thead>
+      <tr style="background:var(--navy);color:var(--white)">
+        <th style="padding:0.6rem 0.8rem;text-align:left;width:130px">Phase</th>
+        <th style="padding:0.6rem 0.8rem;text-align:left;width:55px">Time</th>
+        <th style="padding:0.6rem 0.8rem;text-align:left">What to do</th>
+        <th style="padding:0.6rem 0.8rem;text-align:left">Which resource</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background:#e8f5f3">
+        <td style="padding:0.5rem 0.8rem;font-weight:700;color:var(--teal)">Do Now</td>
+        <td style="padding:0.5rem 0.8rem">5 min</td>
+        <td style="padding:0.5rem 0.8rem">Project questions on board. Students answer from memory. No notes.</td>
+        <td style="padding:0.5rem 0.8rem"><strong>KnowIT Questions</strong> (.docx)</td>
+      </tr>
+      <tr>
+        <td style="padding:0.5rem 0.8rem;font-weight:700;color:var(--teal)">Vocab</td>
+        <td style="padding:0.5rem 0.8rem">3 min</td>
+        <td style="padding:0.5rem 0.8rem">Show 4-5 key terms. Students self-check: do I know these?</td>
+        <td style="padding:0.5rem 0.8rem"><strong>KnowIT PPT</strong> - pick ONE slide with definitions</td>
+      </tr>
+      <tr style="background:#fef0ec">
+        <td style="padding:0.5rem 0.8rem;font-weight:700;color:var(--coral)">I Do</td>
+        <td style="padding:0.5rem 0.8rem">10 min</td>
+        <td style="padding:0.5rem 0.8rem">Talk through 5-8 slides. Skip what they already know. <strong>Don't show the whole PPT.</strong></td>
+        <td style="padding:0.5rem 0.8rem"><strong>KnowIT PPT</strong> - pick 5-8 slides max</td>
+      </tr>
+      <tr style="background:#fef0ec">
+        <td style="padding:0.5rem 0.8rem;font-weight:700;color:var(--coral)">We Do</td>
+        <td style="padding:0.5rem 0.8rem">10 min</td>
+        <td style="padding:0.5rem 0.8rem">Project 2-3 questions on board. Work through as a class. Pick the hard ones.</td>
+        <td style="padding:0.5rem 0.8rem"><strong>GraspIT Answers</strong> - project on board</td>
+      </tr>
+      <tr style="background:#fdf6e3">
+        <td style="padding:0.5rem 0.8rem;font-weight:700;color:#b8860b">You Do</td>
+        <td style="padding:0.5rem 0.8rem">10 min</td>
+        <td style="padding:0.5rem 0.8rem">Hand out worksheet. Students work independently. Self-mark from Answers.</td>
+        <td style="padding:0.5rem 0.8rem"><strong>GraspIT Write On</strong> - print for students</td>
+      </tr>
+      <tr style="background:#fdf6e3">
+        <td style="padding:0.5rem 0.8rem;font-weight:700;color:#b8860b">Exit Ticket</td>
+        <td style="padding:0.5rem 0.8rem">5 min</td>
+        <td style="padding:0.5rem 0.8rem">1-2 challenge questions for stretch, or redo 3 recall questions to check it stuck.</td>
+        <td style="padding:0.5rem 0.8rem"><strong>ThinkIT</strong> or re-use KnowIT Questions</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div style="margin-top:1.2rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0.8rem">
+    <div style="background:var(--white);border-radius:8px;padding:1rem;border-left:4px solid var(--teal);box-shadow:0 1px 4px rgba(0,0,0,0.06)">
+      <h3 style="font-family:Arial;color:var(--navy);font-size:0.95rem;margin-bottom:0.3rem">This week</h3>
+      <p style="font-size:0.85rem;color:var(--grey)">Try a KnowIT Questions Do Now for ONE topic. Just project it and give students 5 minutes. That's it.</p>
+    </div>
+    <div style="background:var(--white);border-radius:8px;padding:1rem;border-left:4px solid var(--coral);box-shadow:0 1px 4px rgba(0,0,0,0.06)">
+      <h3 style="font-family:Arial;color:var(--navy);font-size:0.95rem;margin-bottom:0.3rem">Next week</h3>
+      <p style="font-size:0.85rem;color:var(--grey)">Add a GraspIT Write On for independent practice. Print it, hand it out, students self-mark.</p>
+    </div>
+    <div style="background:var(--white);border-radius:8px;padding:1rem;border-left:4px solid var(--gold);box-shadow:0 1px 4px rgba(0,0,0,0.06)">
+      <h3 style="font-family:Arial;color:var(--navy);font-size:0.95rem;margin-bottom:0.3rem">Week after</h3>
+      <p style="font-size:0.85rem;color:var(--grey)">Try the full structure: Do Now, I Do, We Do, You Do, Exit. You'll be running proper revision lessons.</p>
+    </div>
+  </div>
+
+  <div class="tip" style="margin-top:1rem"><strong>Key rule:</strong> The KnowIT PPTs are long. Do NOT try to go through the whole thing. Pick 5-8 slides that match what you're revising today. Think of it as a resource bank, not a lesson you deliver start to finish.</div>
 </div>
 
 <div class="tab-content" id="tab-extras">
