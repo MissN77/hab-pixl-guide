@@ -1,0 +1,899 @@
+{
+  "Biology": {
+    "01_Key_concepts_in_biology": {
+      "name": "Key concepts in biology",
+      "files": {
+        "knowit_pptx": {
+          "name": "Edexcel_Biology_Key Concepts in Biology_KnowIT_GCSE.pptx",
+          "path": "Biology/01_Key_concepts_in_biology/Edexcel_Biology_Key Concepts in Biology_KnowIT_GCSE.pptx"
+        },
+        "thinkit_pptx": {
+          "name": "Edexcel_Biology_Key Concepts in Biology_ThinkIT_GCSE.pptx",
+          "path": "Biology/01_Key_concepts_in_biology/Edexcel_Biology_Key Concepts in Biology_ThinkIT_GCSE.pptx"
+        },
+        "graspit_answers": {
+          "name": "Edexcel_Biology_Key concepts in biology_GraspIT_GCSE - ANSWERS.docx",
+          "path": "Biology/01_Key_concepts_in_biology/Edexcel_Biology_Key concepts in biology_GraspIT_GCSE - ANSWERS.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Biology_Key concepts in biology_GraspIT_GCSE - WRITE ON.docx",
+          "path": "Biology/01_Key_concepts_in_biology/Edexcel_Biology_Key concepts in biology_GraspIT_GCSE - WRITE ON.docx"
+        },
+        "graspit_reusable": {
+          "name": "Edexcel_Biology_Key concepts in biology_GraspIT_GCSE -reusable worksheet.docx",
+          "path": "Biology/01_Key_concepts_in_biology/Edexcel_Biology_Key concepts in biology_GraspIT_GCSE -reusable worksheet.docx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Biology_Key concepts in biology_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Biology/01_Key_concepts_in_biology/Edexcel_Biology_Key concepts in biology_KnowIT_GCSE_QUESTIONS.docx"
+        }
+      }
+    },
+    "02_Cells_and_control": {
+      "name": "Cells and control",
+      "files": {
+        "knowit_pptx": {
+          "name": "Edexcel_Biology_Cells and Control_KnowIT_GCSE.pptx",
+          "path": "Biology/02_Cells_and_control/Edexcel_Biology_Cells and Control_KnowIT_GCSE.pptx"
+        },
+        "graspit_answers": {
+          "name": "Edexcel_Biology_Cells and control_GraspIT_GCSE- ANSWERS.docx",
+          "path": "Biology/02_Cells_and_control/Edexcel_Biology_Cells and control_GraspIT_GCSE- ANSWERS.docx"
+        },
+        "graspit_reusable": {
+          "name": "Edexcel_Biology_Cells and control_GraspIT_GCSE- Re-useable WS.docx",
+          "path": "Biology/02_Cells_and_control/Edexcel_Biology_Cells and control_GraspIT_GCSE- Re-useable WS.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Biology_Cells and control_GraspIT_GCSE- WRITE ON.docx",
+          "path": "Biology/02_Cells_and_control/Edexcel_Biology_Cells and control_GraspIT_GCSE- WRITE ON.docx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Biology_Cells and control_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Biology/02_Cells_and_control/Edexcel_Biology_Cells and control_KnowIT_GCSE_QUESTIONS.docx"
+        },
+        "thinkit_pptx": {
+          "name": "Edexcel_Biology_Cells and control_ThinkIT_GCSE.pptx",
+          "path": "Biology/02_Cells_and_control/Edexcel_Biology_Cells and control_ThinkIT_GCSE.pptx"
+        }
+      }
+    },
+    "03_Genetics": {
+      "name": "Genetics",
+      "files": {
+        "graspit_reusable": {
+          "name": "Edexcel_Biology_Genetics_GraspIT_ GCSE_Re-useable worksheet.docx",
+          "path": "Biology/03_Genetics/Edexcel_Biology_Genetics_GraspIT_ GCSE_Re-useable worksheet.docx"
+        },
+        "graspit_answers": {
+          "name": "Edexcel_Biology_Genetics_GraspIT_GCSE_ANSWERS.docx",
+          "path": "Biology/03_Genetics/Edexcel_Biology_Genetics_GraspIT_GCSE_ANSWERS.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Biology_Genetics_GraspIT_GCSE_WRITE ON.docx",
+          "path": "Biology/03_Genetics/Edexcel_Biology_Genetics_GraspIT_GCSE_WRITE ON.docx"
+        },
+        "knowit_pptx": {
+          "name": "Edexcel_Biology_Genetics_KnowIT_GCSE.pptx",
+          "path": "Biology/03_Genetics/Edexcel_Biology_Genetics_KnowIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Biology_Genetics_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Biology/03_Genetics/Edexcel_Biology_Genetics_KnowIT_GCSE_QUESTIONS.docx"
+        },
+        "thinkit_pptx": {
+          "name": "Edexcel_Biology_Genetics_ThinkIT_GCSE.pptx",
+          "path": "Biology/03_Genetics/Edexcel_Biology_Genetics_ThinkIT_GCSE.pptx"
+        }
+      }
+    },
+    "04_Natural_selection_and_genetic_modification": {
+      "name": "Natural selection and genetic modification",
+      "files": {
+        "thinkit_pptx": {
+          "name": "Edexcel_Biology_Natural selection and genetic modification_GCSE_ThinkIT.pptx",
+          "path": "Biology/04_Natural_selection_and_genetic_modification/Edexcel_Biology_Natural selection and genetic modification_GCSE_ThinkIT.pptx"
+        },
+        "graspit_answers": {
+          "name": "Edexcel_Biology_Natural selection and genetic modification_GraspIT_ GCSE_Answers.docx",
+          "path": "Biology/04_Natural_selection_and_genetic_modification/Edexcel_Biology_Natural selection and genetic modification_GraspIT_ GCSE_Answers.docx"
+        },
+        "graspit_reusable": {
+          "name": "Edexcel_Biology_Natural selection and genetic modification_GraspIT_ GCSE_Re-useable worksheet.docx",
+          "path": "Biology/04_Natural_selection_and_genetic_modification/Edexcel_Biology_Natural selection and genetic modification_GraspIT_ GCSE_Re-useable worksheet.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Biology_Natural selection and genetic modification_GraspIT_ GCSE_WRITE ON.docx",
+          "path": "Biology/04_Natural_selection_and_genetic_modification/Edexcel_Biology_Natural selection and genetic modification_GraspIT_ GCSE_WRITE ON.docx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Biology_Natural selection and genetic modification_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Biology/04_Natural_selection_and_genetic_modification/Edexcel_Biology_Natural selection and genetic modification_KnowIT_GCSE_QUESTIONS.docx"
+        },
+        "knowit_pptx": {
+          "name": "Edexcel_Natural selection and Genetic modification_KnowIT_GCSE.pptx",
+          "path": "Biology/04_Natural_selection_and_genetic_modification/Edexcel_Natural selection and Genetic modification_KnowIT_GCSE.pptx"
+        }
+      }
+    },
+    "05_Health_disease_and_medicines": {
+      "name": "Health disease and medicines",
+      "files": {
+        "thinkit_pptx": {
+          "name": "Edexcel_Biology_Health disease and the development of medicines_GCSE_ThinkIT.pptx",
+          "path": "Biology/05_Health_disease_and_medicines/Edexcel_Biology_Health disease and the development of medicines_GCSE_ThinkIT.pptx"
+        },
+        "graspit_answers": {
+          "name": "Edexcel_Biology_Health, disease and development of new drugs_ GraspIT_ GCSE -  Answers.docx",
+          "path": "Biology/05_Health_disease_and_medicines/Edexcel_Biology_Health, disease and development of new drugs_ GraspIT_ GCSE -  Answers.docx"
+        },
+        "graspit_reusable": {
+          "name": "Edexcel_Biology_Health, disease and the development of medicines_ GraspIT_ GCSE  - Re-usable worksheet.docx",
+          "path": "Biology/05_Health_disease_and_medicines/Edexcel_Biology_Health, disease and the development of medicines_ GraspIT_ GCSE  - Re-usable worksheet.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Biology_Health, disease and the development of medicines_ GraspIT_ GCSE  - WRITE ON.docx",
+          "path": "Biology/05_Health_disease_and_medicines/Edexcel_Biology_Health, disease and the development of medicines_ GraspIT_ GCSE  - WRITE ON.docx"
+        },
+        "knowit_pptx": {
+          "name": "Edexcel_Biology_Health, disease and the development of medicines_KnowIT_GCSE.pptx",
+          "path": "Biology/05_Health_disease_and_medicines/Edexcel_Biology_Health, disease and the development of medicines_KnowIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Biology_Health, disease and the development of medicines_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Biology/05_Health_disease_and_medicines/Edexcel_Biology_Health, disease and the development of medicines_KnowIT_GCSE_QUESTIONS.docx"
+        }
+      }
+    },
+    "06_Plant_structures_and_functions": {
+      "name": "Plant structures and functions",
+      "files": {
+        "thinkit_pptx": {
+          "name": "Edexcel_Biology_Plant structures and their functions_GCSE_ThinkIT.pptx",
+          "path": "Biology/06_Plant_structures_and_functions/Edexcel_Biology_Plant structures and their functions_GCSE_ThinkIT.pptx"
+        },
+        "knowit_pptx": {
+          "name": "Edexcel_Biology_Plant structures and their functions_KnowIT_GCSE.pptx",
+          "path": "Biology/06_Plant_structures_and_functions/Edexcel_Biology_Plant structures and their functions_KnowIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Biology_Plant structures and their functions_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Biology/06_Plant_structures_and_functions/Edexcel_Biology_Plant structures and their functions_KnowIT_GCSE_QUESTIONS.docx"
+        },
+        "graspit_answers": {
+          "name": "Edexel_Biology_Plant structures and their functions_GraspIT_GCSE - Answers.docx",
+          "path": "Biology/06_Plant_structures_and_functions/Edexel_Biology_Plant structures and their functions_GraspIT_GCSE - Answers.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexel_Biology_Plant structures and their functions_GraspIT_GCSE - WRITE ON.docx",
+          "path": "Biology/06_Plant_structures_and_functions/Edexel_Biology_Plant structures and their functions_GraspIT_GCSE - WRITE ON.docx"
+        },
+        "graspit_reusable": {
+          "name": "Edexel_Biology_Plant structures and their functions_GraspIT_GCSE -reusable worksheet.docx",
+          "path": "Biology/06_Plant_structures_and_functions/Edexel_Biology_Plant structures and their functions_GraspIT_GCSE -reusable worksheet.docx"
+        }
+      }
+    },
+    "07_Animal_coordination_and_homeostasis": {
+      "name": "Animal coordination and homeostasis",
+      "files": {
+        "knowit_pptx": {
+          "name": "Edexcel_Biology_Animal coordination control and homeostasis_KnowIT_GCSE.pptx",
+          "path": "Biology/07_Animal_coordination_and_homeostasis/Edexcel_Biology_Animal coordination control and homeostasis_KnowIT_GCSE.pptx"
+        },
+        "thinkit_pptx": {
+          "name": "Edexcel_Biology_Animal coordination, control and homeostasis _ThinkIT_GCSE.pptx",
+          "path": "Biology/07_Animal_coordination_and_homeostasis/Edexcel_Biology_Animal coordination, control and homeostasis _ThinkIT_GCSE.pptx"
+        },
+        "graspit_answers": {
+          "name": "Edexcel_Biology_Animal coordination, control and homeostasis_GraspIT_GCSE- ANSWERS.docx",
+          "path": "Biology/07_Animal_coordination_and_homeostasis/Edexcel_Biology_Animal coordination, control and homeostasis_GraspIT_GCSE- ANSWERS.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Biology_Animal coordination, control and homeostasis_GraspIT_GCSE- WRITE ON.docx",
+          "path": "Biology/07_Animal_coordination_and_homeostasis/Edexcel_Biology_Animal coordination, control and homeostasis_GraspIT_GCSE- WRITE ON.docx"
+        },
+        "graspit_reusable": {
+          "name": "Edexcel_Biology_Animal coordination, control and homeostasis_GraspIT_GCSE- reusable worksheet.docx",
+          "path": "Biology/07_Animal_coordination_and_homeostasis/Edexcel_Biology_Animal coordination, control and homeostasis_GraspIT_GCSE- reusable worksheet.docx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Biology_animal coordination, control and homeostasis_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Biology/07_Animal_coordination_and_homeostasis/Edexcel_Biology_animal coordination, control and homeostasis_KnowIT_GCSE_QUESTIONS.docx"
+        }
+      }
+    },
+    "08_Exchange_and_transport_in_animals": {
+      "name": "Exchange and transport in animals",
+      "files": {
+        "graspit_answers": {
+          "name": "Edexcel_Biology_Exchange and transport in animals_GraspIT_GCSE - Answers.docx",
+          "path": "Biology/08_Exchange_and_transport_in_animals/Edexcel_Biology_Exchange and transport in animals_GraspIT_GCSE - Answers.docx"
+        },
+        "graspit_reusable": {
+          "name": "Edexcel_Biology_Exchange and transport in animals_GraspIT_GCSE - Questions.docx",
+          "path": "Biology/08_Exchange_and_transport_in_animals/Edexcel_Biology_Exchange and transport in animals_GraspIT_GCSE - Questions.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Biology_Exchange and transport in animals_GraspIT_GCSE - WRITE ON.docx",
+          "path": "Biology/08_Exchange_and_transport_in_animals/Edexcel_Biology_Exchange and transport in animals_GraspIT_GCSE - WRITE ON.docx"
+        },
+        "thinkit_pptx": {
+          "name": "Edexcel_Biology_Exchange and transport in animals_ThinkIT_GCSE.pptx",
+          "path": "Biology/08_Exchange_and_transport_in_animals/Edexcel_Biology_Exchange and transport in animals_ThinkIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Biology_Exchange and trasnport in animals_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Biology/08_Exchange_and_transport_in_animals/Edexcel_Biology_Exchange and trasnport in animals_KnowIT_GCSE_QUESTIONS.docx"
+        },
+        "knowit_pptx": {
+          "name": "Edexcel_Biology_KnowIT Exchange and transport in animals_GCSE.pptx",
+          "path": "Biology/08_Exchange_and_transport_in_animals/Edexcel_Biology_KnowIT Exchange and transport in animals_GCSE.pptx"
+        }
+      }
+    },
+    "09_Ecosystems_and_material_cycles": {
+      "name": "Ecosystems and material cycles",
+      "files": {
+        "knowit_pptx": {
+          "name": "Edexcel_Biology_Ecosystems and material cycles_GCSE.pptx",
+          "path": "Biology/09_Ecosystems_and_material_cycles/Edexcel_Biology_Ecosystems and material cycles_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Biology_Ecosystems and material cycles_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Biology/09_Ecosystems_and_material_cycles/Edexcel_Biology_Ecosystems and material cycles_KnowIT_GCSE_QUESTIONS.docx"
+        },
+        "thinkit_pptx": {
+          "name": "Edexcel_Biology_Ecosystems and material cycles_ThinkIT_GCSE.pptx",
+          "path": "Biology/09_Ecosystems_and_material_cycles/Edexcel_Biology_Ecosystems and material cycles_ThinkIT_GCSE.pptx"
+        },
+        "graspit_answers": {
+          "name": "Edexcel_Biology_Ecosystems and materials cycles_GraspIT_GCSE_ANSWERS.docx",
+          "path": "Biology/09_Ecosystems_and_material_cycles/Edexcel_Biology_Ecosystems and materials cycles_GraspIT_GCSE_ANSWERS.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Biology_Ecosystems and materials cycles_GraspIT_GCSE_WRITE ON.docx",
+          "path": "Biology/09_Ecosystems_and_material_cycles/Edexcel_Biology_Ecosystems and materials cycles_GraspIT_GCSE_WRITE ON.docx"
+        },
+        "graspit_reusable": {
+          "name": "Edexcel_Biology_Ecosystems and materials cycles_GraspIT_GCSE_reusable worksheet.docx",
+          "path": "Biology/09_Ecosystems_and_material_cycles/Edexcel_Biology_Ecosystems and materials cycles_GraspIT_GCSE_reusable worksheet.docx"
+        }
+      }
+    }
+  },
+  "Chemistry": {
+    "01_Key_concepts_in_chemistry": {
+      "name": "Key concepts in chemistry",
+      "files": {
+        "knowit_pptx": {
+          "name": "Edexcel_Chemistry_Key Concepts in Chemistry_KnowIT_GCSE.pptx",
+          "path": "Chemistry/01_Key_concepts_in_chemistry/Edexcel_Chemistry_Key Concepts in Chemistry_KnowIT_GCSE.pptx"
+        },
+        "thinkit_pptx": {
+          "name": "Edexcel_Chemistry_Key Concepts in Chemistry_ThinkIT_GCSE.pptx",
+          "path": "Chemistry/01_Key_concepts_in_chemistry/Edexcel_Chemistry_Key Concepts in Chemistry_ThinkIT_GCSE.pptx"
+        },
+        "graspit_answers": {
+          "name": "Edexcel_Chemistry_Key concepts in chemistry_GraspIT_GCSE_ ANSWERS.docx",
+          "path": "Chemistry/01_Key_concepts_in_chemistry/Edexcel_Chemistry_Key concepts in chemistry_GraspIT_GCSE_ ANSWERS.docx"
+        },
+        "graspit_reusable": {
+          "name": "Edexcel_Chemistry_Key concepts in chemistry_GraspIT_GCSE_ NO WRITING SPACE.docx",
+          "path": "Chemistry/01_Key_concepts_in_chemistry/Edexcel_Chemistry_Key concepts in chemistry_GraspIT_GCSE_ NO WRITING SPACE.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Chemistry_Key concepts in chemistry_GraspIT_GCSE_ WRITING SPACE.docx",
+          "path": "Chemistry/01_Key_concepts_in_chemistry/Edexcel_Chemistry_Key concepts in chemistry_GraspIT_GCSE_ WRITING SPACE.docx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Chemistry_Key concepts in chemistry_KnowIT_GCSE_ QUESTIONS.docx",
+          "path": "Chemistry/01_Key_concepts_in_chemistry/Edexcel_Chemistry_Key concepts in chemistry_KnowIT_GCSE_ QUESTIONS.docx"
+        }
+      }
+    },
+    "02_States_of_matter_and_mixtures": {
+      "name": "States of matter and mixtures",
+      "files": {
+        "thinkit_pptx": {
+          "name": "Edexcel_Chemistry_States of Matter and Mixtures_ThinkIT_GCSE.pptx",
+          "path": "Chemistry/02_States_of_matter_and_mixtures/Edexcel_Chemistry_States of Matter and Mixtures_ThinkIT_GCSE.pptx"
+        },
+        "graspit_answers": {
+          "name": "Edexcel_Chemistry_States of matter and mixtures_GraspIT_GCSE_ANSWERS.docx",
+          "path": "Chemistry/02_States_of_matter_and_mixtures/Edexcel_Chemistry_States of matter and mixtures_GraspIT_GCSE_ANSWERS.docx"
+        },
+        "graspit_reusable": {
+          "name": "Edexcel_Chemistry_States of matter and mixtures_GraspIT_GCSE_NO WRITING SPACE.docx",
+          "path": "Chemistry/02_States_of_matter_and_mixtures/Edexcel_Chemistry_States of matter and mixtures_GraspIT_GCSE_NO WRITING SPACE.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Chemistry_States of matter and mixtures_GraspIT_GCSE_WRITING SPACE.docx",
+          "path": "Chemistry/02_States_of_matter_and_mixtures/Edexcel_Chemistry_States of matter and mixtures_GraspIT_GCSE_WRITING SPACE.docx"
+        },
+        "knowit_pptx": {
+          "name": "Edexcel_Chemistry_States of matter and mixtures_KnowIT_GCSE.pptx",
+          "path": "Chemistry/02_States_of_matter_and_mixtures/Edexcel_Chemistry_States of matter and mixtures_KnowIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Chemistry_States of matter and mixtures_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Chemistry/02_States_of_matter_and_mixtures/Edexcel_Chemistry_States of matter and mixtures_KnowIT_GCSE_QUESTIONS.docx"
+        }
+      }
+    },
+    "03_Chemical_changes": {
+      "name": "Chemical changes",
+      "files": {
+        "thinkit_pptx": {
+          "name": "Edexcel_Chemistry_Chemical Changes_ThinkIT_GCSE.pptx",
+          "path": "Chemistry/03_Chemical_changes/Edexcel_Chemistry_Chemical Changes_ThinkIT_GCSE.pptx"
+        },
+        "graspit_answers": {
+          "name": "Edexcel_Chemistry_Chemical changes_GraspIT_GCSE_ANSWERS.docx",
+          "path": "Chemistry/03_Chemical_changes/Edexcel_Chemistry_Chemical changes_GraspIT_GCSE_ANSWERS.docx"
+        },
+        "graspit_reusable": {
+          "name": "Edexcel_Chemistry_Chemical changes_GraspIT_GCSE_NO WRITING SPACE.docx",
+          "path": "Chemistry/03_Chemical_changes/Edexcel_Chemistry_Chemical changes_GraspIT_GCSE_NO WRITING SPACE.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Chemistry_Chemical changes_GraspIT_GCSE_WRITING SPACE.docx",
+          "path": "Chemistry/03_Chemical_changes/Edexcel_Chemistry_Chemical changes_GraspIT_GCSE_WRITING SPACE.docx"
+        },
+        "knowit_pptx": {
+          "name": "Edexcel_Chemistry_Chemical changes_KnowIT_GCSE.pptx",
+          "path": "Chemistry/03_Chemical_changes/Edexcel_Chemistry_Chemical changes_KnowIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Chemistry_Chemical changes_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Chemistry/03_Chemical_changes/Edexcel_Chemistry_Chemical changes_KnowIT_GCSE_QUESTIONS.docx"
+        }
+      }
+    },
+    "04_Extracting_metals_and_equilibria": {
+      "name": "Extracting metals and equilibria",
+      "files": {
+        "thinkit_pptx": {
+          "name": "Edexcel_Chemistry_Extracting metals and Equilibria_ThinkIT GCSE.pptx",
+          "path": "Chemistry/04_Extracting_metals_and_equilibria/Edexcel_Chemistry_Extracting metals and Equilibria_ThinkIT GCSE.pptx"
+        },
+        "graspit_answers": {
+          "name": "Edexcel_Chemistry_Extracting metals and equilibria_GraspIT_GCSE_ANSWERS.docx",
+          "path": "Chemistry/04_Extracting_metals_and_equilibria/Edexcel_Chemistry_Extracting metals and equilibria_GraspIT_GCSE_ANSWERS.docx"
+        },
+        "graspit_reusable": {
+          "name": "Edexcel_Chemistry_Extracting metals and equilibria_GraspIT_GCSE_NO WRITING SPACE.docx",
+          "path": "Chemistry/04_Extracting_metals_and_equilibria/Edexcel_Chemistry_Extracting metals and equilibria_GraspIT_GCSE_NO WRITING SPACE.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Chemistry_Extracting metals and equilibria_GraspIT_GCSE_WRITING SPACE.docx",
+          "path": "Chemistry/04_Extracting_metals_and_equilibria/Edexcel_Chemistry_Extracting metals and equilibria_GraspIT_GCSE_WRITING SPACE.docx"
+        },
+        "knowit_pptx": {
+          "name": "Edexcel_Chemistry_Extracting metals and equilibria_KnowIT_GCSE.pptx",
+          "path": "Chemistry/04_Extracting_metals_and_equilibria/Edexcel_Chemistry_Extracting metals and equilibria_KnowIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Chemistry_Extracting metals and equilibria_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Chemistry/04_Extracting_metals_and_equilibria/Edexcel_Chemistry_Extracting metals and equilibria_KnowIT_GCSE_QUESTIONS.docx"
+        }
+      }
+    },
+    "05_Separate_chemistry_1": {
+      "name": "Separate chemistry 1",
+      "files": {
+        "graspit_answers": {
+          "name": "Edexcel_Chemistry_Separate Chemistry 1_GraspIT_GCSE_ANSWERS.docx",
+          "path": "Chemistry/05_Separate_chemistry_1/Edexcel_Chemistry_Separate Chemistry 1_GraspIT_GCSE_ANSWERS.docx"
+        },
+        "graspit_reusable": {
+          "name": "Edexcel_Chemistry_Separate Chemistry 1_GraspIT_GCSE_NO WRITING SPACE.docx",
+          "path": "Chemistry/05_Separate_chemistry_1/Edexcel_Chemistry_Separate Chemistry 1_GraspIT_GCSE_NO WRITING SPACE.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Chemistry_Separate Chemistry 1_GraspIT_GCSE_WRITING SPACE.docx",
+          "path": "Chemistry/05_Separate_chemistry_1/Edexcel_Chemistry_Separate Chemistry 1_GraspIT_GCSE_WRITING SPACE.docx"
+        },
+        "knowit_pptx": {
+          "name": "Edexcel_Chemistry_Separate Chemistry 1_KnowIT_GCSE.pptx",
+          "path": "Chemistry/05_Separate_chemistry_1/Edexcel_Chemistry_Separate Chemistry 1_KnowIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Chemistry_Separate Chemistry 1_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Chemistry/05_Separate_chemistry_1/Edexcel_Chemistry_Separate Chemistry 1_KnowIT_GCSE_QUESTIONS.docx"
+        },
+        "thinkit_pptx": {
+          "name": "Edexcel_Chemistry_Separate Chemistry 1_ThinkIT_GCSE.pptx",
+          "path": "Chemistry/05_Separate_chemistry_1/Edexcel_Chemistry_Separate Chemistry 1_ThinkIT_GCSE.pptx"
+        }
+      }
+    },
+    "06_Groups_in_the_periodic_table": {
+      "name": "Groups in the periodic table",
+      "files": {
+        "thinkit_pptx": {
+          "name": "Edexcel_Chemistry_Groups in the Periodic Table_ThinkIT_GCSE.pptx",
+          "path": "Chemistry/06_Groups_in_the_periodic_table/Edexcel_Chemistry_Groups in the Periodic Table_ThinkIT_GCSE.pptx"
+        },
+        "graspit_reusable": {
+          "name": "Edexcel_Chemistry_Groups in the periodic table_GraspIT_GCSE_NO WRITING SPACE.docx",
+          "path": "Chemistry/06_Groups_in_the_periodic_table/Edexcel_Chemistry_Groups in the periodic table_GraspIT_GCSE_NO WRITING SPACE.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Chemistry_Groups in the periodic table_GraspIT_GCSE_WRITING SPACE.docx",
+          "path": "Chemistry/06_Groups_in_the_periodic_table/Edexcel_Chemistry_Groups in the periodic table_GraspIT_GCSE_WRITING SPACE.docx"
+        },
+        "knowit_pptx": {
+          "name": "Edexcel_Chemistry_Groups in the periodic table_KnowIT_GCSE.pptx",
+          "path": "Chemistry/06_Groups_in_the_periodic_table/Edexcel_Chemistry_Groups in the periodic table_KnowIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Chemistry_Groups in the periodic table_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Chemistry/06_Groups_in_the_periodic_table/Edexcel_Chemistry_Groups in the periodic table_KnowIT_GCSE_QUESTIONS.docx"
+        }
+      }
+    },
+    "07_Rates_of_reaction_and_energy_changes": {
+      "name": "Rates of reaction and energy changes",
+      "files": {
+        "thinkit_pptx": {
+          "name": "Edexcel_Chemistry_Rates of Reaction and Energy Changes_ ThinkIT_GCSE.pptx",
+          "path": "Chemistry/07_Rates_of_reaction_and_energy_changes/Edexcel_Chemistry_Rates of Reaction and Energy Changes_ ThinkIT_GCSE.pptx"
+        },
+        "graspit_answers": {
+          "name": "Edexcel_Chemistry_Rates of reaction and energy changes_GraspIT_GCSE_ANSWERS.docx",
+          "path": "Chemistry/07_Rates_of_reaction_and_energy_changes/Edexcel_Chemistry_Rates of reaction and energy changes_GraspIT_GCSE_ANSWERS.docx"
+        },
+        "graspit_reusable": {
+          "name": "Edexcel_Chemistry_Rates of reaction and energy changes_GraspIT_GCSE_NO WRITING SPACE.docx",
+          "path": "Chemistry/07_Rates_of_reaction_and_energy_changes/Edexcel_Chemistry_Rates of reaction and energy changes_GraspIT_GCSE_NO WRITING SPACE.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Chemistry_Rates of reaction and energy changes_GraspIT_GCSE_WRITING SPACE.docx",
+          "path": "Chemistry/07_Rates_of_reaction_and_energy_changes/Edexcel_Chemistry_Rates of reaction and energy changes_GraspIT_GCSE_WRITING SPACE.docx"
+        },
+        "knowit_pptx": {
+          "name": "Edexcel_Chemistry_Rates of reaction and energy changes_KnowIT_GCSE.pptx",
+          "path": "Chemistry/07_Rates_of_reaction_and_energy_changes/Edexcel_Chemistry_Rates of reaction and energy changes_KnowIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Chemistry_Rates of reaction and energy changes_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Chemistry/07_Rates_of_reaction_and_energy_changes/Edexcel_Chemistry_Rates of reaction and energy changes_KnowIT_GCSE_QUESTIONS.docx"
+        }
+      }
+    },
+    "08_Fuels_and_Earth_science": {
+      "name": "Fuels and Earth science",
+      "files": {
+        "thinkit_pptx": {
+          "name": "Edexcel_Chemistry_Fuels and Earth Science_ThinkIT_GCSE.pptx",
+          "path": "Chemistry/08_Fuels_and_Earth_science/Edexcel_Chemistry_Fuels and Earth Science_ThinkIT_GCSE.pptx"
+        },
+        "graspit_answers": {
+          "name": "Edexcel_Chemistry_Fuels and Earth science_GraspIT_GCSE_ANSWERS.docx",
+          "path": "Chemistry/08_Fuels_and_Earth_science/Edexcel_Chemistry_Fuels and Earth science_GraspIT_GCSE_ANSWERS.docx"
+        },
+        "graspit_reusable": {
+          "name": "Edexcel_Chemistry_Fuels and Earth science_GraspIT_GCSE_NO WRITING SPACE.docx",
+          "path": "Chemistry/08_Fuels_and_Earth_science/Edexcel_Chemistry_Fuels and Earth science_GraspIT_GCSE_NO WRITING SPACE.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Chemistry_Fuels and Earth science_GraspIT_GCSE_WRITING SPACE.docx",
+          "path": "Chemistry/08_Fuels_and_Earth_science/Edexcel_Chemistry_Fuels and Earth science_GraspIT_GCSE_WRITING SPACE.docx"
+        },
+        "knowit_pptx": {
+          "name": "Edexcel_Chemistry_Fuels and Earth science_KnowIT_GCSE.pptx",
+          "path": "Chemistry/08_Fuels_and_Earth_science/Edexcel_Chemistry_Fuels and Earth science_KnowIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Chemistry_Fuels and Earth science_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Chemistry/08_Fuels_and_Earth_science/Edexcel_Chemistry_Fuels and Earth science_KnowIT_GCSE_QUESTIONS.docx"
+        }
+      }
+    },
+    "09_Separate_chemistry_2": {
+      "name": "Separate chemistry 2",
+      "files": {
+        "graspit_answers": {
+          "name": "Edexcel_Chemistry_Separate Chemistry 2_GraspIT_GCSE_ANSWERS.docx",
+          "path": "Chemistry/09_Separate_chemistry_2/Edexcel_Chemistry_Separate Chemistry 2_GraspIT_GCSE_ANSWERS.docx"
+        },
+        "graspit_reusable": {
+          "name": "Edexcel_Chemistry_Separate Chemistry 2_GraspIT_GCSE_NO WRITING SPACE.docx",
+          "path": "Chemistry/09_Separate_chemistry_2/Edexcel_Chemistry_Separate Chemistry 2_GraspIT_GCSE_NO WRITING SPACE.docx"
+        },
+        "graspit_writeon": {
+          "name": "Edexcel_Chemistry_Separate Chemistry 2_GraspIT_GCSE_WRITING SPACE.docx",
+          "path": "Chemistry/09_Separate_chemistry_2/Edexcel_Chemistry_Separate Chemistry 2_GraspIT_GCSE_WRITING SPACE.docx"
+        },
+        "knowit_pptx": {
+          "name": "Edexcel_Chemistry_Separate Chemistry 2_KnowIT_GCSE.pptx",
+          "path": "Chemistry/09_Separate_chemistry_2/Edexcel_Chemistry_Separate Chemistry 2_KnowIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "Edexcel_Chemistry_Separate Chemistry 2_KnowIT_GCSE_QUESTIONS.docx",
+          "path": "Chemistry/09_Separate_chemistry_2/Edexcel_Chemistry_Separate Chemistry 2_KnowIT_GCSE_QUESTIONS.docx"
+        },
+        "thinkit_pptx": {
+          "name": "Edexcel_Chemistry_Separate Chemistry 2_ThinkIT_GCSE.pptx",
+          "path": "Chemistry/09_Separate_chemistry_2/Edexcel_Chemistry_Separate Chemistry 2_ThinkIT_GCSE.pptx"
+        }
+      }
+    }
+  },
+  "Physics": {
+    "01_Key_concepts_of_physics": {
+      "name": "Key concepts of physics",
+      "files": {
+        "graspit_answers": {
+          "name": "1. ANSWERS Edexcel_Physics_Key concepts_GraspIT_GCSE.docx",
+          "path": "Physics/01_Key_concepts_of_physics/1. ANSWERS Edexcel_Physics_Key concepts_GraspIT_GCSE.docx"
+        },
+        "knowit_pptx": {
+          "name": "1. Edexcel_Physics_Key concepts of physics_KnowIT_GCSE.pptx",
+          "path": "Physics/01_Key_concepts_of_physics/1. Edexcel_Physics_Key concepts of physics_KnowIT_GCSE.pptx"
+        },
+        "graspit_writeon": {
+          "name": "1. Edexcel_Physics_Key concepts_GraspIT_GCSE WRITE ON.docx",
+          "path": "Physics/01_Key_concepts_of_physics/1. Edexcel_Physics_Key concepts_GraspIT_GCSE WRITE ON.docx"
+        },
+        "graspit_other": {
+          "name": "1. Edexcel_Physics_Key concepts_GraspIT_GCSE.docx",
+          "path": "Physics/01_Key_concepts_of_physics/1. Edexcel_Physics_Key concepts_GraspIT_GCSE.docx"
+        },
+        "knowit_questions": {
+          "name": "KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Key concepts.docx",
+          "path": "Physics/01_Key_concepts_of_physics/KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Key concepts.docx"
+        }
+      }
+    },
+    "02_Motion_and_forces": {
+      "name": "Motion and forces",
+      "files": {
+        "graspit_answers": {
+          "name": "2. ANSWERS Edexcel_Physics_Motion and forces_GraspIT_GCSE.docx",
+          "path": "Physics/02_Motion_and_forces/2. ANSWERS Edexcel_Physics_Motion and forces_GraspIT_GCSE.docx"
+        },
+        "graspit_reusable": {
+          "name": "2. Edexcel_Physics_Motion and forces_GraspIT_GCSE RE USABLE WORKSHEET.docx",
+          "path": "Physics/02_Motion_and_forces/2. Edexcel_Physics_Motion and forces_GraspIT_GCSE RE USABLE WORKSHEET.docx"
+        },
+        "graspit_writeon": {
+          "name": "2. Edexcel_Physics_Motion and forces_GraspIT_GCSE WRITE ON.docx",
+          "path": "Physics/02_Motion_and_forces/2. Edexcel_Physics_Motion and forces_GraspIT_GCSE WRITE ON.docx"
+        },
+        "knowit_pptx": {
+          "name": "2. Edexcel_Physics_Motion and forces_KnowIT_GCSE.pptx",
+          "path": "Physics/02_Motion_and_forces/2. Edexcel_Physics_Motion and forces_KnowIT_GCSE.pptx"
+        },
+        "thinkit_pptx": {
+          "name": "2. Edexcel_Physics_Motion and forces_ThinkIT_GCSE.pptx",
+          "path": "Physics/02_Motion_and_forces/2. Edexcel_Physics_Motion and forces_ThinkIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Motion and forces.docx",
+          "path": "Physics/02_Motion_and_forces/KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Motion and forces.docx"
+        }
+      }
+    },
+    "03_Conservation_of_energy": {
+      "name": "Conservation of energy",
+      "files": {
+        "graspit_answers": {
+          "name": "3. ANSWERS Edexcel_Physics_CONSERVATION OF ENERGY_GraspIT_GCSE.docx",
+          "path": "Physics/03_Conservation_of_energy/3. ANSWERS Edexcel_Physics_CONSERVATION OF ENERGY_GraspIT_GCSE.docx"
+        },
+        "graspit_reusable": {
+          "name": "3. Edexcel_Physics_CONSERVATION OF ENERGY_GraspIT_GCSE RE USABLE WORKSHEET .docx",
+          "path": "Physics/03_Conservation_of_energy/3. Edexcel_Physics_CONSERVATION OF ENERGY_GraspIT_GCSE RE USABLE WORKSHEET .docx"
+        },
+        "graspit_writeon": {
+          "name": "3. Edexcel_Physics_CONSERVATION OF ENERGY_GraspIT_GCSE WRITE ON .docx",
+          "path": "Physics/03_Conservation_of_energy/3. Edexcel_Physics_CONSERVATION OF ENERGY_GraspIT_GCSE WRITE ON .docx"
+        },
+        "knowit_pptx": {
+          "name": "3. Edexcel_Physics_Conservation of energy_KnowIT_GCSE .pptx",
+          "path": "Physics/03_Conservation_of_energy/3. Edexcel_Physics_Conservation of energy_KnowIT_GCSE .pptx"
+        },
+        "thinkit_pptx": {
+          "name": "3. Edexcel_Physics_Conservation of energy_ThinkIT_GCSE .pptx",
+          "path": "Physics/03_Conservation_of_energy/3. Edexcel_Physics_Conservation of energy_ThinkIT_GCSE .pptx"
+        },
+        "knowit_questions": {
+          "name": "KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Conservation of energy.docx",
+          "path": "Physics/03_Conservation_of_energy/KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Conservation of energy.docx"
+        }
+      }
+    },
+    "04_Waves": {
+      "name": "Waves",
+      "files": {
+        "graspit_answers": {
+          "name": "4. ANSWERS Edexcel_Physics_WAVES_GraspIT_GCSE.docx",
+          "path": "Physics/04_Waves/4. ANSWERS Edexcel_Physics_WAVES_GraspIT_GCSE.docx"
+        },
+        "graspit_reusable": {
+          "name": "4. Edexcel_Physics_WAVES_GraspIT_GCSE RE USABLE WORKSHEET.docx",
+          "path": "Physics/04_Waves/4. Edexcel_Physics_WAVES_GraspIT_GCSE RE USABLE WORKSHEET.docx"
+        },
+        "graspit_writeon": {
+          "name": "4. Edexcel_Physics_WAVES_GraspIT_GCSE WRITE ON.docx",
+          "path": "Physics/04_Waves/4. Edexcel_Physics_WAVES_GraspIT_GCSE WRITE ON.docx"
+        },
+        "knowit_pptx": {
+          "name": "4. Edexcel_Physics_Waves_KnowIT_GCSE .pptx",
+          "path": "Physics/04_Waves/4. Edexcel_Physics_Waves_KnowIT_GCSE .pptx"
+        },
+        "thinkit_pptx": {
+          "name": "4. Edexcel_Physics_Waves_ThinkIT_GCSE .pptx",
+          "path": "Physics/04_Waves/4. Edexcel_Physics_Waves_ThinkIT_GCSE .pptx"
+        },
+        "knowit_questions": {
+          "name": "KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Waves.docx",
+          "path": "Physics/04_Waves/KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Waves.docx"
+        }
+      }
+    },
+    "05_Light_and_EM_spectrum": {
+      "name": "Light and EM spectrum",
+      "files": {
+        "graspit_answers": {
+          "name": "5. ANSWERS Edexcel_Physics_Light and the electromagnetic spectrum_GraspIT_GCSE.docx",
+          "path": "Physics/05_Light_and_EM_spectrum/5. ANSWERS Edexcel_Physics_Light and the electromagnetic spectrum_GraspIT_GCSE.docx"
+        },
+        "graspit_reusable": {
+          "name": "5. Edexcel_Physics_Light and the electromagnetic spectrum_GraspIT_GCSE RE USABLE WORKSHEET.docx",
+          "path": "Physics/05_Light_and_EM_spectrum/5. Edexcel_Physics_Light and the electromagnetic spectrum_GraspIT_GCSE RE USABLE WORKSHEET.docx"
+        },
+        "graspit_writeon": {
+          "name": "5. Edexcel_Physics_Light and the electromagnetic spectrum_GraspIT_GCSE WRITE ON.docx",
+          "path": "Physics/05_Light_and_EM_spectrum/5. Edexcel_Physics_Light and the electromagnetic spectrum_GraspIT_GCSE WRITE ON.docx"
+        },
+        "knowit_pptx": {
+          "name": "5. Edexcel_Physics_Light and the electromagnetic spectrum_KnowIT_GCSE.pptx",
+          "path": "Physics/05_Light_and_EM_spectrum/5. Edexcel_Physics_Light and the electromagnetic spectrum_KnowIT_GCSE.pptx"
+        },
+        "thinkit_pptx": {
+          "name": "5. Edexcel_Physics_Light and the electromagnetic spectrum_ThinkIT_GCSE.pptx",
+          "path": "Physics/05_Light_and_EM_spectrum/5. Edexcel_Physics_Light and the electromagnetic spectrum_ThinkIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Light and the electromagnetic spectrum.docx",
+          "path": "Physics/05_Light_and_EM_spectrum/KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Light and the electromagnetic spectrum.docx"
+        }
+      }
+    },
+    "06_Radioactivity": {
+      "name": "Radioactivity",
+      "files": {
+        "graspit_answers": {
+          "name": "6. ANSWERS Edexcel_Physics_Radioactivity_GraspIT_GCSE.docx",
+          "path": "Physics/06_Radioactivity/6. ANSWERS Edexcel_Physics_Radioactivity_GraspIT_GCSE.docx"
+        },
+        "graspit_reusable": {
+          "name": "6. Edexcel_Physics_Radioactivity_GraspIT_GCSE RE USABLE WORKSHEET.docx",
+          "path": "Physics/06_Radioactivity/6. Edexcel_Physics_Radioactivity_GraspIT_GCSE RE USABLE WORKSHEET.docx"
+        },
+        "graspit_writeon": {
+          "name": "6. Edexcel_Physics_Radioactivity_GraspIT_GCSE WRITE ON.docx",
+          "path": "Physics/06_Radioactivity/6. Edexcel_Physics_Radioactivity_GraspIT_GCSE WRITE ON.docx"
+        },
+        "knowit_pptx": {
+          "name": "6. Edexcel_Physics_Radioactivity_KnowIT_GCSE.pptx",
+          "path": "Physics/06_Radioactivity/6. Edexcel_Physics_Radioactivity_KnowIT_GCSE.pptx"
+        },
+        "thinkit_pptx": {
+          "name": "6. Edexcel_Physics_Radioactivity_ThinkIT_GCSE.pptx",
+          "path": "Physics/06_Radioactivity/6. Edexcel_Physics_Radioactivity_ThinkIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Radioactivity.docx",
+          "path": "Physics/06_Radioactivity/KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Radioactivity.docx"
+        }
+      }
+    },
+    "07_Astronomy": {
+      "name": "Astronomy",
+      "files": {
+        "graspit_answers": {
+          "name": "7. ANSWERS Edexcel_Physics_Astronomy_GraspIT_GCSE.docx",
+          "path": "Physics/07_Astronomy/7. ANSWERS Edexcel_Physics_Astronomy_GraspIT_GCSE.docx"
+        },
+        "graspit_reusable": {
+          "name": "7. Edexcel_Physics_Astronomy_GraspIT_GCSE RE USABLE WORKSHEET.docx",
+          "path": "Physics/07_Astronomy/7. Edexcel_Physics_Astronomy_GraspIT_GCSE RE USABLE WORKSHEET.docx"
+        },
+        "graspit_writeon": {
+          "name": "7. Edexcel_Physics_Astronomy_GraspIT_GCSE WRITE ON .docx",
+          "path": "Physics/07_Astronomy/7. Edexcel_Physics_Astronomy_GraspIT_GCSE WRITE ON .docx"
+        },
+        "knowit_pptx": {
+          "name": "7. Edexcel_Physics_Astronomy_KnowIT_GCSE.pptx",
+          "path": "Physics/07_Astronomy/7. Edexcel_Physics_Astronomy_KnowIT_GCSE.pptx"
+        },
+        "thinkit_pptx": {
+          "name": "7. Edexcel_Physics_Astronomy_ThinkIT_GCSE.pptx",
+          "path": "Physics/07_Astronomy/7. Edexcel_Physics_Astronomy_ThinkIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Astronomy.docx",
+          "path": "Physics/07_Astronomy/KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Astronomy.docx"
+        }
+      }
+    },
+    "08_Energy_forces_doing_work": {
+      "name": "Energy forces doing work",
+      "files": {
+        "graspit_answers": {
+          "name": "8. ANSWERS Edexcel_Physics_Energy Forces Doing Work_GraspIT_GCSE.docx",
+          "path": "Physics/08_Energy_forces_doing_work/8. ANSWERS Edexcel_Physics_Energy Forces Doing Work_GraspIT_GCSE.docx"
+        },
+        "knowit_pptx": {
+          "name": "8. Edexcel_Physics_Energy - Forces doing work_KnowIT_GCSE.pptx",
+          "path": "Physics/08_Energy_forces_doing_work/8. Edexcel_Physics_Energy - Forces doing work_KnowIT_GCSE.pptx"
+        },
+        "thinkit_pptx": {
+          "name": "8. Edexcel_Physics_Energy - Forces doing work_ThinkIT_GCSE.pptx",
+          "path": "Physics/08_Energy_forces_doing_work/8. Edexcel_Physics_Energy - Forces doing work_ThinkIT_GCSE.pptx"
+        },
+        "graspit_reusable": {
+          "name": "8. Edexcel_Physics_Energy Forces Doing Work_GraspIT_GCSE RE USABLE WORKSHEET.docx",
+          "path": "Physics/08_Energy_forces_doing_work/8. Edexcel_Physics_Energy Forces Doing Work_GraspIT_GCSE RE USABLE WORKSHEET.docx"
+        },
+        "graspit_writeon": {
+          "name": "8. Edexcel_Physics_Energy Forces Doing Work_GraspIT_GCSE WRITE ON.docx",
+          "path": "Physics/08_Energy_forces_doing_work/8. Edexcel_Physics_Energy Forces Doing Work_GraspIT_GCSE WRITE ON.docx"
+        },
+        "knowit_questions": {
+          "name": "KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Forces doing work.docx",
+          "path": "Physics/08_Energy_forces_doing_work/KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Forces doing work.docx"
+        }
+      }
+    },
+    "09_Forces_and_their_effects": {
+      "name": "Forces and their effects",
+      "files": {
+        "graspit_answers": {
+          "name": "9. ANSWERS Edexcel_Physics_forces and their effects_GraspIT_GCSE.docx",
+          "path": "Physics/09_Forces_and_their_effects/9. ANSWERS Edexcel_Physics_forces and their effects_GraspIT_GCSE.docx"
+        },
+        "knowit_pptx": {
+          "name": "9. Edexcel_Physics_Forces and their effects_KnowIT_GCSE.pptx",
+          "path": "Physics/09_Forces_and_their_effects/9. Edexcel_Physics_Forces and their effects_KnowIT_GCSE.pptx"
+        },
+        "thinkit_pptx": {
+          "name": "9. Edexcel_Physics_Forces and their effects_ThinkIT_GCSE.pptx",
+          "path": "Physics/09_Forces_and_their_effects/9. Edexcel_Physics_Forces and their effects_ThinkIT_GCSE.pptx"
+        },
+        "graspit_reusable": {
+          "name": "9. Edexcel_Physics_forces and their effects_GraspIT_GCSE RE USABLE WORKSHEET.docx",
+          "path": "Physics/09_Forces_and_their_effects/9. Edexcel_Physics_forces and their effects_GraspIT_GCSE RE USABLE WORKSHEET.docx"
+        },
+        "graspit_writeon": {
+          "name": "9. Edexcel_Physics_forces and their effects_GraspIT_GCSE WRITE ON.docx",
+          "path": "Physics/09_Forces_and_their_effects/9. Edexcel_Physics_forces and their effects_GraspIT_GCSE WRITE ON.docx"
+        },
+        "knowit_questions": {
+          "name": "KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Forces and their effects.docx",
+          "path": "Physics/09_Forces_and_their_effects/KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Forces and their effects.docx"
+        }
+      }
+    },
+    "10_11_Electricity_circuits_static": {
+      "name": "11 Electricity circuits static",
+      "files": {
+        "graspit_answers": {
+          "name": "10 and 11. ANSWERS Edexcel_Electricity Circuits Static_GraspIT_GCSE.docx",
+          "path": "Physics/10_11_Electricity_circuits_static/10 and 11. ANSWERS Edexcel_Electricity Circuits Static_GraspIT_GCSE.docx"
+        },
+        "knowit_pptx": {
+          "name": "10 and 11. Edexcel Physics Electricity, circuits and static electricity KnowIT_GCSE.pptx",
+          "path": "Physics/10_11_Electricity_circuits_static/10 and 11. Edexcel Physics Electricity, circuits and static electricity KnowIT_GCSE.pptx"
+        },
+        "graspit_reusable": {
+          "name": "10 and 11. Edexcel_Electricity Circuits Static_GraspIT_GCSE RE USABLE WORKSHEET.docx",
+          "path": "Physics/10_11_Electricity_circuits_static/10 and 11. Edexcel_Electricity Circuits Static_GraspIT_GCSE RE USABLE WORKSHEET.docx"
+        },
+        "graspit_writeon": {
+          "name": "10 and 11. Edexcel_Electricity Circuits Static_GraspIT_GCSE WRITE ON.docx",
+          "path": "Physics/10_11_Electricity_circuits_static/10 and 11. Edexcel_Electricity Circuits Static_GraspIT_GCSE WRITE ON.docx"
+        },
+        "thinkit_pptx": {
+          "name": "10 and 11. Edexcel_Physics_Electricity and circuits and static electricity_ThinkIT_GCSE.pptx",
+          "path": "Physics/10_11_Electricity_circuits_static/10 and 11. Edexcel_Physics_Electricity and circuits and static electricity_ThinkIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Electricity, circuits and  static electricity.docx",
+          "path": "Physics/10_11_Electricity_circuits_static/KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Electricity, circuits and  static electricity.docx"
+        }
+      }
+    },
+    "12_13_Magnetism_motor_EM_induction": {
+      "name": "13 Magnetism motor EM induction",
+      "files": {
+        "graspit_answers": {
+          "name": "12 and 13. ANSWERS Edexcel_Magnetism Motor Effect Electromagnetic Induction_GraspIT_GCSE.docx",
+          "path": "Physics/12_13_Magnetism_motor_EM_induction/12 and 13. ANSWERS Edexcel_Magnetism Motor Effect Electromagnetic Induction_GraspIT_GCSE.docx"
+        },
+        "graspit_reusable": {
+          "name": "12 and 13. Edexcel_Magnetism Motor Effect Electromagnetic Induction_GraspIT_GCSE RE USABLE WORKSHEET.docx",
+          "path": "Physics/12_13_Magnetism_motor_EM_induction/12 and 13. Edexcel_Magnetism Motor Effect Electromagnetic Induction_GraspIT_GCSE RE USABLE WORKSHEET.docx"
+        },
+        "graspit_writeon": {
+          "name": "12 and 13. Edexcel_Magnetism Motor Effect Electromagnetic Induction_GraspIT_GCSE WRITE ON .docx",
+          "path": "Physics/12_13_Magnetism_motor_EM_induction/12 and 13. Edexcel_Magnetism Motor Effect Electromagnetic Induction_GraspIT_GCSE WRITE ON .docx"
+        },
+        "knowit_pptx": {
+          "name": "12 and 13. Edexcel_Physics_Magnetism, the motor effect and electromagnetic induction _KnowIT_GCSE.pptx",
+          "path": "Physics/12_13_Magnetism_motor_EM_induction/12 and 13. Edexcel_Physics_Magnetism, the motor effect and electromagnetic induction _KnowIT_GCSE.pptx"
+        },
+        "thinkit_pptx": {
+          "name": "12 and 13. Edexcel_Physics_Magnetism, the motor effect and electromagnetic induction _ThinkIT_GCSE.pptx",
+          "path": "Physics/12_13_Magnetism_motor_EM_induction/12 and 13. Edexcel_Physics_Magnetism, the motor effect and electromagnetic induction _ThinkIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Magnetism, the motor effect and electromagnetic induction  .docx",
+          "path": "Physics/12_13_Magnetism_motor_EM_induction/KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Magnetism, the motor effect and electromagnetic induction  .docx"
+        }
+      }
+    },
+    "14_Particle_model": {
+      "name": "Particle model",
+      "files": {
+        "graspit_answers": {
+          "name": "14. ANSWERS Edexcel_Particle Model_GraspIT_GCSE.docx",
+          "path": "Physics/14_Particle_model/14. ANSWERS Edexcel_Particle Model_GraspIT_GCSE.docx"
+        },
+        "graspit_reusable": {
+          "name": "14. Edexcel_Particle Model_GraspIT_GCSE RE USABLE WORKSHEET.docx",
+          "path": "Physics/14_Particle_model/14. Edexcel_Particle Model_GraspIT_GCSE RE USABLE WORKSHEET.docx"
+        },
+        "graspit_writeon": {
+          "name": "14. Edexcel_Particle Model_GraspIT_GCSE WRITE ON.docx",
+          "path": "Physics/14_Particle_model/14. Edexcel_Particle Model_GraspIT_GCSE WRITE ON.docx"
+        },
+        "knowit_pptx": {
+          "name": "14. Edexcel_Physics_The particle model_GCSE_KnowIT.pptx",
+          "path": "Physics/14_Particle_model/14. Edexcel_Physics_The particle model_GCSE_KnowIT.pptx"
+        },
+        "thinkit_pptx": {
+          "name": "14. Edexcel_Physics_The particle model_GCSE_ThinkIT.pptx",
+          "path": "Physics/14_Particle_model/14. Edexcel_Physics_The particle model_GCSE_ThinkIT.pptx"
+        },
+        "knowit_questions": {
+          "name": "KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 The particle model .docx",
+          "path": "Physics/14_Particle_model/KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 The particle model .docx"
+        }
+      }
+    },
+    "15_Forces_and_matter": {
+      "name": "Forces and matter",
+      "files": {
+        "graspit_answers": {
+          "name": "15. ANSWERS Edexcel_Forces and matter_GraspIT_GCSE RE USABLE WORKSHEET.docx",
+          "path": "Physics/15_Forces_and_matter/15. ANSWERS Edexcel_Forces and matter_GraspIT_GCSE RE USABLE WORKSHEET.docx"
+        },
+        "graspit_reusable": {
+          "name": "15. Edexcel_Forces and matter_GraspIT_GCSE RE USABLE WORKSHEET.docx",
+          "path": "Physics/15_Forces_and_matter/15. Edexcel_Forces and matter_GraspIT_GCSE RE USABLE WORKSHEET.docx"
+        },
+        "graspit_writeon": {
+          "name": "15. Edexcel_Forces and matter_GraspIT_GCSE WRITE ON.docx",
+          "path": "Physics/15_Forces_and_matter/15. Edexcel_Forces and matter_GraspIT_GCSE WRITE ON.docx"
+        },
+        "knowit_pptx": {
+          "name": "15. Edexcel_Physics_Forces and matter_KnowIT_GCSE.pptx",
+          "path": "Physics/15_Forces_and_matter/15. Edexcel_Physics_Forces and matter_KnowIT_GCSE.pptx"
+        },
+        "thinkit_pptx": {
+          "name": "15. Edexcel_Physics_Forces and matter_ThinkIT_GCSE.pptx",
+          "path": "Physics/15_Forces_and_matter/15. Edexcel_Physics_Forces and matter_ThinkIT_GCSE.pptx"
+        },
+        "knowit_questions": {
+          "name": "KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Forces and matter .docx",
+          "path": "Physics/15_Forces_and_matter/KnowIT Questions \u2013 Edexcel GCSE Physics \u2013 Forces and matter .docx"
+        }
+      }
+    }
+  }
+}
