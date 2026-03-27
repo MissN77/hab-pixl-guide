@@ -49,8 +49,11 @@
   .phase-info{flex:1}
   .phase-name{font-weight:700;font-family:Arial;color:var(--navy);font-size:0.95rem}
   .phase-desc{font-size:0.8rem;color:var(--grey)}
-  .dl-btn{background:var(--teal);color:var(--white);border:none;padding:0.4rem 0.9rem;border-radius:6px;cursor:pointer;font-size:0.8rem;font-weight:600;text-decoration:none;display:inline-block;white-space:nowrap}
+  .btn-group{display:flex;gap:0.3rem;flex-wrap:wrap}
+  .dl-btn{background:var(--teal);color:var(--white);border:none;padding:0.4rem 0.7rem;border-radius:6px;cursor:pointer;font-size:0.78rem;font-weight:600;text-decoration:none;display:inline-block;white-space:nowrap}
   .dl-btn:hover{background:#238b7e}
+  .dl-btn.preview{background:var(--navy)}
+  .dl-btn.preview:hover{background:#2a3d66}
   .dl-btn.missing{background:#ccc;cursor:not-allowed}
   .no-topic{text-align:center;padding:2.5rem;color:var(--grey);font-size:1rem}
 
@@ -170,8 +173,7 @@ async function checkPw() {
     "a]PLACEHOLDER" // Will be set properly
   ];
   // Simple check - accept known passwords
-  const accepted = ["HABscience2026", "habscience2026", "HABscience", "pixlscience"];
-  if (accepted.includes(input)) {
+  if (input === "habscience2026") {
     document.getElementById("gate").style.display = "none";
     document.getElementById("app").style.display = "block";
     sessionStorage.setItem("pixl_auth", "1");
@@ -223,27 +225,31 @@ function buildLesson() {
   const color = {Biology:"var(--bio)",Chemistry:"var(--chem)",Physics:"var(--phys)"}[subj];
 
   const phases = [
-    {num:1, name:"Do Now / Retrieval", desc:"Students answer recall questions from memory (5 mins)", file:"knowit_questions", label:"Download Questions"},
-    {num:2, name:"Vocab / Glossary", desc:"Display key terms. Students self-check gaps", file:"knowit_pptx", label:"Download KnowIT PPT"},
-    {num:3, name:"I Do (Teacher Models)", desc:"Teacher presents key knowledge on board", file:"knowit_pptx", label:"Download KnowIT PPT"},
-    {num:4, name:"We Do (Guided Practice)", desc:"Work through questions together as a class", file:"graspit_answers", label:"Download Answers"},
-    {num:5, name:"You Do (Independent)", desc:"Students work through questions on their own", file:"graspit_writeon", label:"Download Write On"},
-    {num:6, name:"Exit Ticket / Stretch", desc:"Quick check or challenge for top students", file:"thinkit_pptx", label:"Download ThinkIT"},
+    {num:1, name:"Do Now / Retrieval", desc:"Students answer recall questions from memory (5 mins)", file:"knowit_questions", label:"Questions"},
+    {num:2, name:"Vocab / Glossary", desc:"Display key terms. Students self-check gaps", file:"knowit_pptx", label:"KnowIT PPT"},
+    {num:3, name:"I Do (Teacher Models)", desc:"Teacher presents key knowledge on board", file:"knowit_pptx", label:"KnowIT PPT"},
+    {num:4, name:"We Do (Guided Practice)", desc:"Work through questions together as a class", file:"graspit_answers", label:"Answers"},
+    {num:5, name:"You Do (Independent)", desc:"Students work through questions on their own", file:"graspit_writeon", label:"Write On"},
+    {num:6, name:"Exit Ticket / Stretch", desc:"Quick check or challenge for top students", file:"thinkit_pptx", label:"ThinkIT"},
   ];
 
   let html = `<div class="topic-header" style="background:${color}">${subj}: ${topic.name}</div><div class="lesson-flow">`;
 
   phases.forEach(p => {
-    const f = files[p.file];
+    let f = files[p.file];
+    // Vocab fallback to KnowIT PPT
+    if (!f && p.num === 2) f = files["knowit_pptx"];
+
     let btn;
     if (f) {
-      btn = `<a href="${f.path}" download="${f.name}" class="dl-btn">${p.label}</a>`;
+      const fullUrl = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '/') + f.path;
+      const previewUrl = "https://view.officeapps.live.com/op/view.aspx?src=" + encodeURIComponent(fullUrl);
+      btn = `<div class="btn-group">
+        <a href="${previewUrl}" target="_blank" class="dl-btn preview" title="Preview in browser">Preview</a>
+        <a href="${f.path}" download="${f.name}" class="dl-btn" title="Download to computer">Download</a>
+      </div>`;
     } else if (p.file === "thinkit_pptx") {
       btn = `<span class="dl-btn missing">No ThinkIT</span>`;
-    } else if (p.num === 2) {
-      // Vocab can fallback to KnowIT PPT
-      const kp = files["knowit_pptx"];
-      btn = kp ? `<a href="${kp.path}" download="${kp.name}" class="dl-btn">${p.label}</a>` : `<span class="dl-btn missing">Not available</span>`;
     } else {
       btn = `<span class="dl-btn missing">Not available</span>`;
     }
@@ -261,7 +267,10 @@ function buildLesson() {
     html += `<div class="phase" style="background:#f9f9f9">
       <div class="phase-num" style="background:var(--grey)">+</div>
       <div class="phase-info"><div class="phase-name">Bonus: Reusable Worksheet</div><div class="phase-desc">Same questions, formatted for laminating or projecting</div></div>
-      <div><a href="${reusable.path}" download="${reusable.name}" class="dl-btn" style="background:var(--grey)">Download</a></div>
+      <div class="btn-group">
+        <a href="https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '/') + reusable.path)}" target="_blank" class="dl-btn preview">Preview</a>
+        <a href="${reusable.path}" download="${reusable.name}" class="dl-btn" style="background:var(--grey)">Download</a>
+      </div>
     </div>`;
   }
 
