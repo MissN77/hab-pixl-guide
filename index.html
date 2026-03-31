@@ -386,7 +386,41 @@ document.querySelectorAll(".tab-btn").forEach(btn => {
     document.querySelectorAll(".tab-content").forEach(c=>c.classList.remove("active"));
     btn.classList.add("active");
     document.getElementById("tab-"+btn.dataset.tab).classList.add("active");
+    sbPost('teacher_app_log', { action: 'tab_click', detail: btn.dataset.tab });
   });
+});
+
+/* ═══════════════════════════════════════════════════
+   SUPABASE TEACHER APP TRACKING
+   ═══════════════════════════════════════════════════ */
+const SB_URL = 'https://awnmaakxaqevodjjuzsm.supabase.co';
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF3bm1hYWt4YXFldm9kamp1enNtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0MzgwNzIsImV4cCI6MjA5MDAxNDA3Mn0.uwpcN1iqJos6llw4XAZLSYLqZc0AnVJK8tVTYbxmiZs';
+
+function sbPost(table, data) {
+  data.timestamp = new Date().toISOString();
+  data.page = 'teacher-app';
+  fetch(SB_URL + '/rest/v1/' + table, {
+    method: 'POST',
+    headers: {
+      'apikey': SB_KEY,
+      'Authorization': 'Bearer ' + SB_KEY,
+      'Content-Type': 'application/json',
+      'Prefer': 'return=minimal'
+    },
+    body: JSON.stringify(data)
+  }).catch(() => {});
+}
+
+// Log page load
+sbPost('teacher_app_log', { action: 'page_load', detail: 'index' });
+
+// Track resource downloads and previews
+document.addEventListener('click', function(e) {
+  const btn = e.target.closest('a[href*=".pdf"], a[href*=".pptx"], a[href*=".docx"], button[onclick*="preview"], a[download]');
+  if (btn) {
+    const href = btn.href || btn.getAttribute('onclick') || '';
+    sbPost('teacher_app_log', { action: 'resource_click', detail: href.substring(0, 200) });
+  }
 });
 </script>
 </body>
